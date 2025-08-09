@@ -1,0 +1,43 @@
+<!-- This will not run in any browser it needs some local host browser called "web server for chrome" -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web worker</title>
+</head>
+
+<body>
+
+    <p>Count numbers : <output id="result"></output></p>
+
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+
+
+    <script>
+        var w;
+        function startWorker() {
+            if (typeof (Worker) != "undefined") {
+
+                if (typeof (w) != "undefined") {
+                    w = new Worker(DEMO.JS);
+                }
+                w.onmessage = function (evnet) {
+                    document.getElementById("result").innerHTML = event.data;
+                }
+            }
+            else {
+                document.getElementById("result").inerHTML = "YOur browser dosent support web worker api"
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
+
+</html>

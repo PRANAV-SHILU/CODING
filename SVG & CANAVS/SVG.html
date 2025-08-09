@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+</head>
+
+<body>
+
+    <h1>
+        <center>SVG - Scalable Vector Graphics</center>
+    </h1>
+    <!-- heigth and width is for that size will go never bigger than it -->
+
+    <h4>circle</h4>
+    <svg width="200" height="200">
+        <circle cx="50" cy="50" r="40" stroke="yellow" stroke-width="4" fill="red">
+    </svg>
+
+    <h4>ellipse</h4>
+    <svg height="200" width="500">
+        <ellipse cx="120" cy="60" rx="100" ry="50" style="fill: yellow; stroke:purple;stroke-width:5">
+            <!--rx=width ry=height cx=cy=placement-->
+    </svg>
+
+    <h4>rectangle</h4>
+    <svg width="600" height="200">
+        <rect width="300" height="100" stroke="yellow" stroke-width="4" fill="red">
+    </svg>
+
+    <h4>line</h4>
+    <svg height="210" width="600">
+        <line x1="50" y1="50" x2="500" y2="50" style="stroke:blue;stroke-width:3;">
+            <!--
+            x1=start point left horizontal
+            x2=end point right horizontal
+            y1=startpoint verticle left
+            y2=endpoint verticle right
+            -->
+    </svg>
+
+    <h4>polygone</h4>
+    <svg height="250" width="500">
+        <polygon points="200,10 270,190 130,190" style="fill:orange;stroke:black;stroke-width:3;">
+            <!--first and last point will automaticle connect-->
+    </svg>
+
+    <h4>polyline</h4>
+    <svg height="250" width="500">
+        <polyline points="10,20 40,22 70,40 80,120 120,140 200,180"
+            style="fill:none;stroke:rgb(245, 43, 43);stroke-width:3;">
+            <!--first and last point will not automaticle connect-->
+    </svg>
+
+
+
+
+    <!-- SVG PATH -->
+    <!--     
+    Z - 1 AND LAST LINE COMBINE KARE
+    M - MOVE TO - START point
+    L - LINE TO
+    S - SMOOTH CURV 
+    -->
+    <h4>path with fill </h4>
+    <svg height="200" width="500">
+        <path d="M150 0 L75 200 L225 200 L120 20 Z" stroke="black" fill="black" />
+    </svg>
+
+    <h4>path with fill none</h4>
+    <svg height="200" width="500">
+        <path d="M100 0 S 150 200 300 0" stroke="blue" fill="none" stroke-width="3" />
+    </svg>
+
+    <!-- SVG TEXT -->
+    <h4>text</h4>
+    <svg height="90" width="200">
+        <text x="0" y="15" fill="red" stroke="blue" stroke-width="0.5" transform="rotate(30 20, 40)">This is SVG
+            text</text>
+    </svg>
+
+    <!-- SVG STROKE -->
+    <!-- g - to use multiple path in one svg -->
+
+    <h4>two different stroke</h4>
+    <svg height="80" width="300">
+        <g fill="none">
+
+            <path stroke="red" STROKE-WIDTH="2" d="M5 20 L230 0" />
+            <path stroke="GOLD" STROKE-WIDTH="4" d="M5 40 L230 0" />
+            <path stroke="BLUE" STROKE-WIDTH="6" d="M5 60 L230 0" />
+
+            <path stroke="red" stroke-width="2" stroke-linecap="butt" stroke-dasharray="5,5" d="M5 20 L230 20" />
+            <path stroke="gold" stroke-width="4" stroke-linecap="round" stroke-dasharray="10,10" d="M5 40 L230 40" />
+            <path stroke="blue" stroke-width="6" stroke-linecap="square" stroke-dasharray="20,10,5,5,5,10"
+                d="M5 60 L230 60" />
+    </svg>
+
+
+
+    <!-- SVG GRADIENT -->
+    <h4>linear Gradient</h4>
+
+    <svg height="150" width="400">
+        <defs>
+            <linearGradient id="grad4" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:yellow" />
+                <stop offset="100%" style="stop-color: red;" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad4)" />
+        <text fill="#fff" x="150" y="85" font-size="30">Text</text>
+    </svg>
+
+    <svg height="150" width="400">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:yellow" />
+                <stop offset="100%" style="stop-color: red;" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    </svg>
+
+    <svg height="150" width="400">
+        <defs>
+            <linearGradient id="grad3" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:yellow" />
+                <stop offset="100%" style="stop-color: red;" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad3)" />
+    </svg>
+
+    <svg height="150" width="400">
+        <defs>
+            <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:yellow" />
+                <stop offset="100%" style="stop-color: red;" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)" />
+    </svg>
+
+    <!-- radial Gradient -->
+    <h4>radial Gradient</h4>
+    <svg height="150" width="400">
+        <defs>
+            <radialGradient id="grad5" cx="0%" cy="0%" r="50%" fx="50%" fy="50%">
+                <!-- radiuse high means yellow gihe and viceversa -->
+                <stop offset="0%" style="stop-color:yellow" />
+                <stop offset="100%" style="stop-color: red;" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad5)" />
+    </svg>
+
+
+    <h4>X</h4>
+    <svg height="500" width="500">
+        <path stroke="black" STROKE-WIDTH="10" stroke-linecap="round" d="M130 10 L250 120" />
+        <line x1="250" y1="5" x2="130" y2="125" stroke-linecap="round" style="stroke:black;stroke-width:1">
+    </svg>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+
+</head>
+
+<body>
+
+    <h1>
+        <center>CANVAS</center>
+    </h1>
+    <hr>
+
+    <canvas id="canva1" width="300" height="200" style="border: 2px solid;">
+        Your browser does not support canvas.
+    </canvas>
+
+    <canvas id="canva2" width="300" height="200" style="border: 2px solid;">
+        Your browser does not support canvas.
+    </canvas>
+
+    <canvas id="canva3" width="300" height="200" style="border: 2px solid;">
+        Your browser does not support canvas.
+    </canvas>
+
+    <canvas id="canva4" width="300" height="200" style="border: 2px solid;">
+        Your browser does not support canvas.
+    </canvas>
+
+
+    <script>
+        //Rectangle
+        var c = document.getElementById("canva1");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(50, 50, 200, 100);
+
+        // line in rectangle
+        var c2 = document.getElementById("canva2");
+        var ctx2 = c2.getContext("2d");
+        ctx2.moveTo(10, 10);
+        ctx2.lineTo(200, 120);
+        ctx2.stroke();
+
+        // circle 
+        var c3 = document.getElementById("canva3");
+        var ctx3 = c3.getContext("2d");
+        ctx3.beginPath();
+        // x=95 y=50 r=40 start=0 stop=2*Math.PI 
+        ctx3.arc(120, 70, 40, 0, 2 * Math.PI)
+        ctx3.stroke();
+
+        // text
+        var c4 = document.getElementById("canva4");
+        var ctx4 = c4.getContext("2d");
+        ctx4.font = "30px Arial";
+        ctx4.fillText("Hello World!", 10, 50);
+        ctx4.strokeText("Hello World!", 10, 100);
+
+
+
+    </script>
+
+</body>
+
+</html>

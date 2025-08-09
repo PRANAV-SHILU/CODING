@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web local storage</title>
+</head>
+
+<body>
+
+    <input type="text" id="lastnameInput" placeholder="Enter your lastname">
+    <button onclick="saveLastname()">Save</button>
+    <p id="result"></p>
+
+    <script>
+        if (typeof (Storage) !== "undefined") {
+            // Show stored value on page load
+            document.getElementById("result").innerHTML = localStorage.getItem("lastname") || "No lastname saved yet.";
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+
+        function saveLastname() {
+            var input = document.getElementById("lastnameInput").value;
+            localStorage.setItem("lastname", input);
+            document.getElementById("result").innerHTML = input;
+        }
+    </script>
+
+</body>
+
+</html>
