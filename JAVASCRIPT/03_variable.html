@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    console.log("JavaScript tutorial 3: var, let and const")
+
+    var a=45;
+    {
+        var a=50;   //redeclaring and reassigning
+        document.write(a+"<br>");
+    }
+    document.write(a+"<br>");
+
+    let b='one';
+    {
+        let b='two';    //redeclaring but not reassigning
+        document.write(b+"<br>");
+    }
+    document.write(b+"<br>");
+
+    const name = 'pranav';
+    document.write(name+"<br>");
+
+    name='shilu';   //reassigning not allowed
+    document.write(name+"<br>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("conditional statement ")
+
+        let age = prompt("hey what is your age") //it is always string
+        console.log(typeof age)
+
+        // let b = parseInt(prompt("age"))
+        // console.log(typeof b)
+
+
+        if (age > 0) {
+            alert("this is valid age");
+        }
+
+        if (age > 18)
+            alert("Able to drive");
+        else
+            alert("Below valid age")
+
+
+        if (age < 12)
+            alert("Go and watch pogo")
+        else if (age < 18)
+            alert("You can watch movie")
+        else
+            alert("Ok bro, you won")
+
+        
+        console.log("Switch case")
+        age="pranav";
+        switch(age)
+        {
+            case 'pranav':
+                console.log(age)
+                break;
+            case 'shilu':
+                console.log(age);
+                break;
+            default:
+                console.log("ok")
+        }
+
+
+        console.log("Ternary operator");
+        age=20;
+        console.log("you can ",age>18?"drive":"not drive")
+
+    </script>
+</body>
+
+</html>
