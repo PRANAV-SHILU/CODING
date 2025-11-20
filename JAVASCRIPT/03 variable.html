@@ -12,19 +12,24 @@
 
         console.log("JavaScript tutorial 3: var, let and const")
 
-        var a = 45;
+
+        var a = 45;     // var has global scope
         {
             var a = 50;   //redeclaring and reassigning
             document.write(a + "<br>");
         }
         document.write(a + "<br>");
 
-        let b = 'one';
+
+
+        let b = 'one';  // let has block level scope
         {
             let b = 'two';    //redeclaring but not reassigning
             document.write(b + "<br>");
         }
         document.write(b + "<br>");
+
+
 
         const name = 'pranav';
         document.write(name + "<br>");

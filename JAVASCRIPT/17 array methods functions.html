@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Array methods
+
+        let num = [1, 2, 3, 4, 5]
+        console.log("Array => ", num, "   length : ", num.length)
+
+        let b = num.toString()                  //coverts array into string
+        console.log("string => ", b, "   length : ", b.length)                        // b is a string
+
+        let c = num.join("-")         //make join each element with '-' 
+        console.log("join", c)              // c is a string
+
+        let r = num.pop()  //removes last element, if used vari then returns last poped element
+        console.log("pop", r, num)
+
+        r = num.shift()  //removes first element, if used vari then returns first deleted element
+        console.log("shift", r, num)
+
+        num.push(55)         // add to the last and returns lenghth of new array
+        console.log("push", num)
+
+        r = num.unshift(10)       // adds to start and returns new length
+        console.log("unshift", r, num)
+
+    </script>
+</body>
+
+</html>

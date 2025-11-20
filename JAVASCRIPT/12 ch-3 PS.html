@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Q - 1 
+        let marks = {
+            pranav: 100,
+            raj: 78,
+            harsh: 54,
+            lavesh: 45,
+            monica: 4,
+        }
+
+        console.log("=> For loop")
+        for (let i = 0; i < Object.keys(marks).length; i++)  // we cant use marks[i] beacause it is not array or it has not numaric index
+            console.log("The marks of " + Object.keys(marks)[i] + " are " + marks[Object.keys(marks)[i]])
+
+
+
+        // Q - 2
+        console.log("=> for in loop")
+        for (i in marks)
+            console.log("The marks of " + i + " are " + marks[i])
+
+
+        console.log("for of loop")
+        // for (i of marks)   // for of loop will not work on oobject
+        //     console.log("The marks of " + i + " are " + marks[i])
+
+
+        // Q - 3
+        let num = 18
+        while (i != num) {
+            i = prompt("Enter correct num num=18")
+            console.log("Try again")
+        }
+        console.log("You have entered a correcct number")
+
+
+        // Q - 4
+        console.log("Function")
+        const mean = (a, b, c, d) => {
+            return (a + b + c + d) / 4
+        }
+        console.log("avg ", mean(1, 2, 3, 4))
+
+
+    </script>
+</body>
+
+</html>
