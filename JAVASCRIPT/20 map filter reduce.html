@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log("Array map method")
+        let arr1 = [15, 24, 3, 6, 54]
+
+        let new1 = arr1.map((value, index, array) => {
+            console.log(index, value, array)
+            return value + index;
+        });
+        console.log("Mapped array", new1);  //returns a new array with after specified operation on each element
+
+
+        console.log("Array filter method")
+        let arr2 = [1, 0, 5, 52, 48, 365, 2, 15, 54, 25]
+        let new2 = arr2.filter((value) => {
+            return value < 10;
+        })
+        console.log("Filtered array", new2);    // return array whichever element meets the condition
+
+
+        console.log("Array reduce method")
+        let arr3 = [1, 2, 3, 4, 5,]
+
+        let sum = arr3.reduce((h1, h2) => {
+            console.log(h1, h2);
+            return h1 + h2;                        // sum+=i value, at lastly it returns one number of sum of all elements
+        })
+
+        // const sum_func = (h1,h2)=>{
+        //     return h1+h2;
+        // }
+        // let sum=arr3.reduce(sum_func);
+
+        console.log("Reduced sum", sum);   // return only one number after applaying operation on each element of array, here returns sum of all elements
+
+
+    </script>
+</body>
+
+</html>
