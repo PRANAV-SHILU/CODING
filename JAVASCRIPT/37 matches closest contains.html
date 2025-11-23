@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="id1" class="box">This is an element 1 <span id="sp1" class="d">span1</span></div>
+    <div id="id2" class="box">This is an element 2</div>
+
+    <script>
+        let id1 = document.getElementById("id1")
+
+        // if id1 contains class called box for itself 
+        // does not search inside it, only searchs for itself
+        console.log(id1.matches(".box"))    //true
+        console.log(id1.matches(".class"))   //false
+        console.log(id1.matches(".d"))   //false
+
+
+        // finds closest element in parent then above parent way
+        let sp1 = document.getElementById("sp1")
+        console.log(sp1.closest(".box"))        // returns the closest element 
+        console.log(sp1.closest("#sp1"))
+
+
+        // search inside and itself it contains or not in children
+        // if id has sp1 children
+        console.log(id1.contains(sp1))  //true
+        console.log(sp1.contains(id1))  //false
+    </script>
+</body>
+
+</html>
