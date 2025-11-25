@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <button id="btn">click me</button>
+    </div>
+
+    <script>
+
+        //dont write onclick in html and in js, write click only or only mouseenter
+
+        let x = function () {
+            alert("hello world 1")
+        }
+        let y = function () {
+            alert("hello world 2")
+        }
+
+        btn.addEventListener('click', x)
+        btn.addEventListener('click', y)
+
+
+        let a = prompt("what is number")
+        if (a == "2") {
+            btn.removeEventListener('click', x) // it will remove y eventlistner
+        }
+
+
+        btn.addEventListener('mouseenter', function(){
+            alert("hover")
+        })
+    </script>
+
+</body>
+
+</html>
