@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("promise 1 not resolved pending")
+                resolve(1);
+            }, 2000);
+        })
+
+        // this .then multiple handler runs like Syncronously one by one
+        p1.then(() => {
+            console.log("congratulations you have resolved promise 1 from first handler")
+        })
+
+        p1.then(() => {
+            console.log("hello world from second handler of promise 1")
+        })
+    </script>
+</body>
+
+</html>
