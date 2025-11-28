@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- so if there is error then it use catch else it ignore catch in try-catch but the 'finally' clause will always runs inrespactively of execute or not but finally will run always   -->
+
+    <!-- even you 'return' from function let say in 'try' still finally will definately be used -->
+
+    <script>
+        try {
+            let a = 0
+            console.log(prog)  //error
+            console.log("Successfully runs")
+        } catch (err) {
+            console.log("Error found")
+            console.log(p)  // error in catch still finally will run though
+        } finally {
+            console.log("i dont know whether above is runned or not")
+            // exit loop
+            // close file
+        }
+
+        //if finally not used then if error occures in catch then next code will not be run
+    </script>
+
+</body>
+
+</html>

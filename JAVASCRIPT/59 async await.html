@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        // async function harry() {
+        //     return 5;   // returns a promise that resolves to 5 when use async
+        // }
+
+        // harry().then((x) => {
+        //     console.log("this is from async function ", x)
+        // })
+
+        async function harry() {
+            let delhiWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("27 degree");
+                }, 2000);
+            })
+
+            let bangloreWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("21 degree");
+                }, 5000);
+            })
+
+            // delhiWeather.then(alert)
+            // bangloreWeather.then(alert)
+
+            console.log("fetching delhi weather please wait...");
+            let delhi = await delhiWeather;   // wait until the promise is resolved and then only move to next line
+            console.log("fetched delhi weather: " + delhi);
+            console.log("fetching banglore weather please wait...");
+            let banglore = await bangloreWeather;  //  now after delhi is resolved only then move to this line and wait for this to be resolved
+            console.log("fetched banglore weather: " + banglore);
+
+            return [delhi, banglore];
+        }
+
+        const cherry = () => {
+            console.log("cherry");
+        }
+
+        const mainfunc = async () => {
+            console.log("welcome to weather control room");
+            let a = await harry();
+            // console.log(a);  // a is a promise
+            let b = await cherry();
+        }
+
+        mainfunc();
+
+        // let a= harry()
+        // a.then((value) => {
+        //     console.log(value);
+        // })
+
+
     </script>
 </body>
+
 </html>
