@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let a = {
+            name : "harry",
+            language : "gujarati",
+        }
+
+        console.log(a)
+
+        let p = {
+            run: ()=>{
+                alert("run")
+            }
+        }
+
+        a.__proto__ = p  // proto is like inheritence* that gives property of self to other
+        a.run()
+    </script>
+    
+</body>
+</html>

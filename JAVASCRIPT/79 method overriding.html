@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- child class constructor must call parent class constructor before while defining child constructor using super(args); -->
+    
+    <script>
+        class Employee{
+            login(){
+                console.log(`Employee has logged in`)
+            }
+            logout(){
+                console.log(`Employee has logged out`)
+            }
+            requestLeaves(leaves){
+                console.log(`Employee has requested ${leaves} leaves - auto approved`)
+            }
+        }
+        class Programmer extends Employee{
+            requestCoffee(){
+                console.log(`Employee has requested ${x} coffees`)
+            }
+             requestLeaves(leaves){
+                super.requestLeaves(leaves)  // child class calls parent class function
+                console.log("One extra leaved approved")
+                // console.log(`Programmer has requested ${leaves+1} leaves with 1 extra leaves`)
+            }
+        }
+
+        let e = new Employee()
+        e.login()
+        e.requestLeaves(3)
+
+        let p =new Programmer()
+        p.login()
+        p.requestLeaves(3)
+    </script>
+</body>
+</html>
