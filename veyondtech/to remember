@@ -1,5 +1,4 @@
 Responsive Screensizes:
-
 2560
 1920
 1660
@@ -18,3 +17,24 @@ Responsive Screensizes:
 480
 380
 360
+
+
+
+every part of nav must be in div
+
+dont write text directly inside div use tag
+
+when there is no long text use div such as badge
+
+container , max-width : 1280px, width :96%
+
+same for the image , width in percentage
+
+use only specified media quary, not by your  own
+
+even logo img must be in div in navabr
+
+when using btn-white use display block to align properly with other
+
+pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,10}$"
+
