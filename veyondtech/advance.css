@@ -1,0 +1,78 @@
+ border: 10px solid transparent;
+ border-image: url(border.png) 30 round;
+30- slices image from corner
+round - normal
+stretch - stretches the image both as background-repeat
+
+
+
+background-image: url(img_flwr.gif), url(paper.gif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+
+
+ The CSS background-origin property specifies where the background image is positioned.
+padding-box - The background image starts from the top-left corner of the padding edge. This is default
+border-box - The background image starts from the top-left corner of the border edge
+content-box - The background image starts from the top-left corner of the content edge
+
+
+The CSS background-clip property defines how far the background (color, image, or gradient) should extend within an element.
+border-box - The background extends behind the border. This is default
+padding-box - The background extends to the inside edge of the border
+content-box - The background extends to the edge of the content box
+
+
+revise from w3schools
+linear- line that goes in a straight line
+radial - circular that originate from a central point
+conic - divide fromcenter point and rotate around it
+
+background-color: red; /* For browsers that do not support gradients */
+ background-image: linear-gradient(to bottom, red, yellow);
+ background-image: linear-gradient(to bottom right, red, yellow);
+ repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
+
+
+  background-image: radial-gradient(red, yellow, green);
+   background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+shape parameter defines the shape of the gradient. It can take one of the following values:
+ellipse (this is default)
+circle
+background-image: radial-gradient(circle, red, yellow, green);
+background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+
+
+ background-image: conic-gradient(red, yellow, green);
+  background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+
+
+  background-image: conic-gradient(red, yellow, green, blue, black);
+  border-radius: 50%;
+  pie chart circle
+  background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+  background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+   background-image: conic-gradient(from 90deg, red, yellow, green);  starts from 90degree
+     background-image: repeating-conic-gradient(red 10%, yellow 20%);
+
+
+
+
+       box-shadow: 10px 10px 5px 12px lightblue;
+       :horizontal :vertical blur radius
+       parameter- inset,outset  box-shadow: 10px 10px 5px lightblue inset;
+       box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+
+
+
+        word-wrap: break-word; if a word doesnot fit in borders  it breaks the word
+
+        writing-mode: vertical-rl - The text flows vertically from top to bottom, horizontally from right to left
+vertical-lr - The text flows vertically from top to bottom, horizontally from left to right
+
+
+
+
+for image shapes
+clip-path: circle(50%);

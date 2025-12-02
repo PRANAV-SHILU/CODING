@@ -1,0 +1,115 @@
+/*for sticky position , relative and fixed, swiggy header, when scorlled down fixed to top*/
+postion: sticky;
+top: 0;
+
+
+position 
+fixed
+sticky 
+relative normal 
+absolute to overlay , like text on img, div=relative,text=absolute
+
+
+
+z-index: when use z index position should be absolute and other relative
+-1 behind
+1 front
+2 top of 1
+
+
+The CSS overflow property controls what happens to content that is too big to fit into an area.
+hidden - The overflow is clipped, and the rest of the content is hidden
+scroll - Scrollbars are added. User must scroll to see all content
+auto - Similar to scroll, but adds scrollbars only when necessary
+overflow-x specifies what to do with the left/right edges of the content.
+overflow-y specifies what to do with the top/bottom edges of the content.
+
+
+
+
+ float places an element on the left or right side of its container, allowing text and inline elements to wrap around it.
+ left - The element floats to the left of its container
+right - The element floats to the right of its container
+
+
+
+The clear property specifies what should happen with the element that is NEXT to a floating element.
+The clear property prevents elements from wrapping around or beside the floated content.
+left - The element is pushed below floated elements on its left side
+right - The element is pushed below floated elements, on its right side
+both - The element is pushed below floated elements, on both its left and right side
+
+
+If a floated element is taller than the containing element, it will "overflow" outside of its container. We can then add a clearfix hack to solve this problem:
+The clearfix hack involves the ::after pseudo-element, and is used to ensure that the parent container properly encloses its floated child elements:
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+<div class="clearfix">
+  <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+</div>
+content: "" - Ensures the pseudo-element is rendered, even if it has no visible content
+clear: both - This clears both left and right floats, effectively pushing any following content below the floated elements, and forces the parent container to expand to include them
+display: table - This creates a new block formatting context, which helps in containing floats
+
+
+
+display: flex;  flex-direction: row;
+justify-content: center;  also flex-start and flex-end and space-between and space-around 
+align-items: center;
+justify for horizontal algnment
+align for vertical alignment
+flex needed to write
+
+
+display: grid;
+place-items: center;
+ both hori and verti if used grid
+
+
+position: absolute;
+right: 0px; or left 0px;
+top: 0px; or bottom 0px;
+will place the element to right of the page
+
+
+:focus pseudo-class when clicked on in
+p:first-child first p of any parent element 
+or div p:first-child means first p of that div
+p:last-child last p of any parent element or div
+a:hover:not(.active) when hover on a but not on active class
+p:nth-child(2) second p of any parent element or div
+p:nth-child(odd) odd p of any parent element or div
+p:nth-child(even) even p of any parent element or div
+p:nth-child(3n) every 3rd p of any parent element or div
+
+
+The p::first-line pseudo-element is used to add a special style to the first line of a text. only for block elements
+The ::first-letter pseudo-element is used to add a special style to the first letter of a text.
+The ::before pseudo-element is used to insert some content before the content of a specified element. using content property , content: url("img.gif");
+::marker for all or ul li::marker to style bullet points like disc
+The ::selection when select some text
+
+
+
+The [attribute] selector is used to select elements with a specific attribute
+a[target]{} or a[target="_blank"] or direct on any element [title~="flower"] , (~) if any that containf flower even with other worrd like "sun flower"
+input[type=text] - will only select text fields
+input[type=password] - will only select password fields
+input[type=number] 
+
+
+
+
+The !important rule is used to give the value of a specific property the highest priority.
+The !important rule will override ALL previous styling rules for that specific property on that element!
+
+
+width: calc(100% - 100px);
+height: calc(30vh + 50px);
+
+Use width:max(50,50px) to set the width of #div1 to whichever value is largest, 50% or 300px:
+Use width:min(50%,50px) to set the width of #div1 to whichever value is smallest, 50% or 300px:
