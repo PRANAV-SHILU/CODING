@@ -23,25 +23,3 @@ Laptops / Large up to 1024px @media (max-width: 1024px) Small laptops, tablets l
 Desktops / Extra Large up to 1200px @media (max-width: 1200px) Normal monitors
 
 Desktops / Extra Large above 1200px @media (min-width: 1200px)
-
-
-Responsive Screensizes:
- 
-2560
-1920
-1660
-1600
-1480
-1400
-1365
-1280
-1140
-1024
-960
-840
-768
-640
-540
-480
-380
-360
