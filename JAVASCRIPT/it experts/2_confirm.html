@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+</head>
+
+<body>
+    <h1> Example of confirm box</h1>
+    <br>
+    <hr>
+    <br>
+    <form action="1_alert.html" target="_blank">
+        <input type="submit" value="Submit" onclick="return confirmbox();">
+    </form>
+    <script>
+        function confirmbox() {
+            let r = confirm(" Are You Confirm");
+            if (r == true) {
+                alert("you confirm submit form");
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

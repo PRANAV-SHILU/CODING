@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- book ticket -->
+    <div class="container-fluid">
+        <div class="row">
+            <form action="">
+                <div class="row mt-3 shadow p-4">
+                    <div class="col-3">
+                        <h2 class="fw-bold text-danger">Book Ticket</h2>
+                    </div>
+                    <div class="col-2">
+                        <label for="name" class=" form-label fw-bold">name</label>
+                        <input type="text" name="name" id="name" class=" form-control" placeholder="enter name here">
+                    </div>
+
+                    <div class="col-2">
+                        <label for="from" class=" form-label fw-bold">from</label>
+                        <select name="from" id="from" class=" form-select">
+                            <option value="0">select city</option>
+                            <option value="1">bhavnagar</option>
+                            <option value="2">surat</option>
+                            <option value="3">rajkot</option>
+                            <option value="4">baroda</option>
+                            <option value="5">ahmedabad</option>
+                        </select>
+                    </div>
+
+                    <div class="col-2">
+                        <label for="to" class=" form-label fw-bold">to</label>
+                        <select name="to" id="to" class=" form-select">
+                            <option value="0">select city</option>
+                            <option value="1">bhavnagar</option>
+                            <option value="2">surat</option>
+                            <option value="3">rajkot</option>
+                            <option value="4">baroda</option>
+                            <option value="5">ahmedabad</option>
+                        </select>
+                    </div>
+
+                    <div class="col-1">
+                        <label for="seat" class=" form-label">seat</label>
+                        <input type="number" name="seat" id="seat" class=" form-control">
+                    </div>
+
+                    <div class="col-2">
+                        <button type="submit" class=" btn btn-danger w-100">submit</button>
+                        <button type="reset" class=" btn btn-dark w-100 mt-1">clear all</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div><br><br>
+    <hr>
+
+
+    <div class="container mt-5">
+        <!-- verticle form -->
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="card shadow">
+                    <div class="card-header h2 text-bg-primary">
+                        Verticle form
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post">
+                            <div>
+                                <label for="name" class=" form-label">username</label>
+                                <input type="text" name="name" id="name" class=" form-control"
+                                    placeholder="enter username here">
+                            </div>
+                            <div class="mt-3">
+                                <label for="email" class=" form-label">email</label>
+                                <input type="email" name="email" id="email" class=" form-control"
+                                    placeholder="abc@gmail.com">
+                            </div>
+                            <div class="mt-3">
+                                <label for="password" class=" form-label">password</label>
+                                <input type="password" name="password" id="password" class=" form-control"
+                                    placeholder="ex.123456">
+                            </div>
+                            <div class="mt-3 text-center">
+                                <button type="submit" class="btn btn-primary">submit</button>
+                                <button type="reset" class=" btn btn-outline-dark">clear
+                                    all</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <hr>
+
+        <!-- horizontal form -->
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <div class="card shadow">
+                    <div class="card-header h2 text-bg-danger">
+                        Horizontal form
+                    </div>
+                    <div class="card-body ">
+                        <form action="" method="post">
+                            <div class="d-flex justify-content-between">
+                                <label for="" class="form-label">color</label>
+                                <input type="color" name=" " id="" class="form-control w-50">
+                            </div>
+
+                            <div class="mt-3 d-flex justify-content-between">
+                                <label for="" class="form-label">date</label>
+                                <input type="date" name=" " id="" class="form-control w-50" min="2025-06-20"
+                                    max="2025-06-29">
+                            </div>
+
+                            <div class="mt-3 d-flex justify-content-between">
+                                <label for="" class="form-label">time</label>
+                                <input type="time" name=" " id="" class="form-control w-50">
+                            </div>
+
+                            <div class="mt-3 d-flex justify-content-between">
+                                <label for="" class="form-label">photo</label>
+                                <input type="file" name=" " id="" class="form-control w-50" accept="image/*" multiple>
+                            </div>
+
+                            <div class="mt-3 text-end">
+                                <button type="submit" class="btn btn-danger">submit</button>
+                                <button type="reset" class=" btn btn-outline-dark">clear all</button>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div><br><br>
+        <hr>
+
+        <!-- bank form form floating -->
+        <div class="row mt-5">
+            <div class="col-8 offset-2">
+                <div class="card shadow">
+                    <div class="card-header h2 text-bg-success">
+                        Bank Opening details
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="text" name="" placeholder="first name" id="" class="form-control">
+                                        <label for="" class="form-label">first name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="text" name="" placeholder="middle name" id="" class="form-control">
+                                        <label for="" class="form-label">middle name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="text" name="" placeholder="last name" id="" class="form-control">
+                                        <label for="" class="form-label">last name</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col">
+                                    <div class=" input-group"> <span class="input-group-text text-bg-dark">+91</span>
+                                        <div class="form-floating">
+                                            <input type="tel" name="" id="" class="form-control">
+                                            <label for="" class="form-label">Mobile number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="date" name="" placeholder="DOB" id="" class="form-control">
+                                        <label for="" class="form-label">Date of Birth</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="text" name="" id="" class="form-control" pattern="[0-9]{12}">
+                                        <label for="" class="form-label">Aadhar number</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-floating">
+                                        <input type="text" name="" id="" class="form-control"
+                                            pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+                                        <label for="" class="form-label">Pan number</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="" class="form-label fw-bold">Gender</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="gen" class="form-check-input">
+                                        <label class="form-label">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="gen" class="form-check-input">
+                                        <label class="form-label">Female</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <label for="" class="form-label fw-bold">Language</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" name="eng" id="eng" class=" form-check-input">
+                                        <label for="eng" class="form-label">eng</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" name="" id="" class=" form-check-input">
+                                        <label for="" class="form-label">hindi</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" name="" id="" class=" form-check-input">
+                                        <label for="" class="form-label">guj</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-4">
+                                    <label for="" class="form-label">Select class</label>
+                                    <select name="cast" id="" class="form-select">
+                                        <option value="0">Select cast</option>
+                                        <option value="1">Sc</option>
+                                        <option value="2">St</option>
+                                        <option value="3">Obc</option>
+                                        <option value="4">General</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <label for="add1" class=" form-label">Address 1</label>
+                                    <textarea class=" form-control" name="add1" id="add1" rows="4"></textarea>
+                                </div>
+                                <div class="col-6">
+                                    <label for="add1" class=" form-label">Address 2</label>
+                                    <textarea class=" form-control" name="add1" id="add1" rows="4"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 text-center">
+                                <div class="col-12">
+                                    <button class=" btn btn-success w-25" type="submit">submit</button>
+                                    <button class=" btn btn-dark w-25" type="reset">clear all</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <hr>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+</html>
