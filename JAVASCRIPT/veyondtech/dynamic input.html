@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 20px;
+            padding: 30px 50px;
+            border: 1px solid gray;
+            margin: 0 auto;
+            width: 500px;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        #add {
+            color: blue;
+        }
+
+        #remove {
+            color: red;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <button id="add">Add</button>
+        </div>
+    </div>
+
+    <script>
+        let container = document.getElementsByClassName("container")[0];
+
+        let add = document.getElementById("add");
+
+        let newEntry = `
+        <div class="row">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <button id="remove" onclick="removeEntry(this);">Remove</button>
+        </div>
+        `
+
+        add.addEventListener('click', () => {
+            container.insertAdjacentHTML('beforeend', newEntry);
+        })
+
+        function removeEntry(element) {
+            element.parentElement.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>

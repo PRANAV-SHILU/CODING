@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+        }
+
+        #preview {
+            margin: 50px;
+            display: none;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myform" method="post" novalidate>
+
+        <label for="Firstname">First name : </label>
+        <input type="text" id="fname" name="fname" pattern="[A-Za-z]{3,25}" placeholder="chirag" required
+            title="Enter atleast 3 character long name without space">
+        <p id="fnameMsg"></p><br>
+
+        <label for="Lastname">Last name : </label>
+        <input type="text" id="lname" pattern="[A-Za-z]{3,25}" placeholder="solanki" required
+            title="Enter atleast 3 character long name without space">
+        <p id="lnameMsg"></p><br>
+
+        <label for="Number">Mobile number : </label>
+        <input type="tel" id="number" pattern="[0-9]{10}" required title="Enter a valid 10 digit mobile number"
+            placeholder="9033823598">
+        <p id="numberMsg"></p><br>
+
+        <label for="Email">E-mail : </label>
+        <input type="email" id="email" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,10}$" required
+            title="Please enter a valid email address (e.g., user@example.com)" placeholder="user@example.com">
+        <p id="emailMsg"></p><br>
+
+        <label for="Education">Select Education : </label>
+        <input type="radio" name="education">
+        <label for="below10th"> Below 10th &nbsp;</label> <!--checked-->
+        <input type="radio" name="education">
+        <label for=" Below12th"> Below 12th &nbsp;</label>
+        <input type="radio" name="education">
+        <label for="Above 12th">Above 12th</label>
+        <p id="radioMsg"></p>
+        <br>
+
+        <label for="Hobby">Select hobby</label>
+        <input type="checkbox" name="hobby">
+        <label for="cricekt">cricekt &nbsp;</label>
+        <input type="checkbox" name="hobby">
+        <label for="football">football &nbsp;</label>
+        <input type="checkbox" name="hobby">
+        <label for="tennish">tennish</label>
+        <p id="hobbyMsg"></p>
+        <br>
+
+        <label for="image">Insert image : </label>
+        <input type="file" id="img" accept="image/*" onchange="showImg();">
+        <p id="imgmsg"></p>
+        <br><br>
+
+        <label for="submit"></label>
+        <input type="submit" value="submit">
+
+    </form>
+
+
+    <img src="#" alt="preview of Image inserted form" id="preview">
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>

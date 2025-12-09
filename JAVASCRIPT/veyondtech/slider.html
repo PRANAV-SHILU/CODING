@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider {
+            margin: 50px auto;
+            width: 1350px;
+        }
+
+        .previous {
+            color: white;
+            background-color: purple;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .next {
+            color: white;
+            background-color: purple;
+            padding: 10px 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #slide1 .previous,
+        #slide5 .next {
+            background-color: gray;
+        }
+
+        .slide {
+            width: 1350px;
+            display: flex;
+            gap: 100px;
+            align-items: center;
+        }
+
+        img {
+            width: 800px;
+            height: 800px;
+        }
+
+        #slide2,
+        #slide3,
+        #slide4,
+        #slide5 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="slider">
+
+        <div id="slide1" class="slide">
+            <button class="previous">Previous</button>
+            <img src="img1.jpg" alt="image 1">
+            <button class="next" onclick="nextSlide(this)">Next</button>
+        </div>
+
+        <div id="slide2" class="slide">
+            <button class="previous" onclick="backSlide(this)">Previous</button>
+            <img src="img2.gif" alt="image 2">
+            <button class="next" onclick="nextSlide(this)">Next</button>
+        </div>
+
+        <div id="slide3" class="slide">
+            <button class="previous" onclick="backSlide(this)">Previous</button>
+            <img src="img3.jpg" alt="image 2">
+            <button class="next" onclick="nextSlide(this)">Next</button>
+        </div>
+
+        <div id="slide4" class="slide">
+            <button class="previous" onclick="backSlide(this)">Previous</button>
+            <img src="img4.jpg" alt="image 2">
+            <button class="next" onclick="nextSlide(this)">Next</button>
+        </div>
+
+        <div id="slide5" class="slide">
+            <button class="previous" onclick="backSlide(this)">Previous</button>
+            <img src="img5.jpg" alt="image 3">
+            <button class="next">Next</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        function nextSlide(e) {
+            let currentSlide = e.parentElement;
+            let nextSlide = currentSlide.nextElementSibling;
+
+            currentSlide.style.display = "none"
+            nextSlide.style.display = "flex"
+        }
+
+        function backSlide(e) {
+            let currentSlide = e.parentElement;
+            let prevSlide = currentSlide.previousElementSibling;
+
+            currentSlide.style.display = "none"
+            prevSlide.style.display = "flex"
+        }
+
+    </script>
+
+</body>
+
+</html>

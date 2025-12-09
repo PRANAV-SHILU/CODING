@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 20px;
+            padding: 10px 30px;
+            border: 1px solid gray;
+            margin: 0 auto;
+            width: 350px;
+        }
+
+        .formbox {
+            display: grid;
+            gap: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        button,
+        #done {
+            padding: 5px 0;
+            width: 70px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .next,
+        #done {
+            color: white;
+            background-color: purple;
+            margin: 0 0 0 auto;
+        }
+
+        .align {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .back {
+            color: white;
+            background-color: gray;
+            margin: 0 auto 0 0;
+        }
+
+        #form2,
+        #form3 {
+            display: none;
+        }
+
+        h1,
+        #info span {
+            text-align: center;
+        }
+
+        p {
+            color: red;
+            margin: 0;
+        }
+
+        #info {
+            display: grid;
+            gap: 20px;
+            padding: 10px 30px;
+            color: black;
+            margin: 30px auto;
+            width: 550px;
+        }
+
+        #info p {
+            color: black;
+        }
+
+        .menu {
+            width: 350px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .step {
+            background-color: gray;
+            color: white;
+            font-size: 30px;
+            border: 1px solid white;
+            padding: 12px 21px;
+            border-radius: 33px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Form</h1>
+
+    <div class="menu">
+        <span id="step1" onclick="step1()" class="step">1</span>
+        <span id="step2" onclick="step2()" class="step">2</span>
+        <span id="step3" onclick="step3()" class="step">3</span>
+    </div>
+
+    <form id="form" method="post">
+        <div class="container">
+
+            <div id="form1" class="formbox">
+                <h2>SIGNUP INFO</h2>
+                <input type="email" id="email" placeholder="Email Adress">
+                <p></p>
+                <input type="password" id="pass1" placeholder="Password">
+                <p></p>
+                <input type="password" id="pass2" placeholder="Password">
+                <p></p>
+                <div class="align">
+                    <button class="next" type="button" onclick="validate1(this)">Next</button>
+                </div>
+            </div>
+
+            <div id="form2" class="formbox">
+                <h2>PERSONAL INFO</h2>
+                <input type="text" id="uname" placeholder="User name">
+                <p></p>
+                <input type="text" id="fname" placeholder="First name">
+                <p></p>
+                <input type="text" id="lname" placeholder="Last name">
+                <p></p>
+                <div class="align">
+                    <button class="back" type="button" onclick="prev(this);">Back</button>
+                    <button class="next" type="button" onclick="validate2(this)">Next</button>
+                </div>
+            </div>
+
+            <div id="form3" class="formbox">
+                <h2>PROFESSIONAL INFO</h2>
+                <input type="text" id="cname" placeholder="Company name">
+                <p></p>
+                <input type="text" id="city" placeholder="City">
+                <p></p>
+                <input type="text" id="designation" placeholder="Designation">
+                <p></p>
+                <div class="align">
+                    <button class="back" type="button" onclick="prev(this);">Back</button>
+                    <input type="submit" value="submit" id="done">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="info"></div>
+
+    <script src="multistepform.js"></script>
+</body>
+
+</html>

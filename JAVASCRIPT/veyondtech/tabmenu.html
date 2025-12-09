@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 50px;
+            display: flex;
+            gap: 50px;
+        }
+
+        li {
+            list-style: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .content {
+            display: none;
+            margin-left: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li onclick="change('india', this);">india</li>
+        <li onclick="change('china',this)">china</li>
+        <li onclick="change('russia', this)">russia</li>
+    </ul>
+
+    <div id="india" class="content">
+        <h3>India</h3>
+        <p>Delhi is the capital city of India.</p>
+    </div>
+    <div id="china" class="content">
+        <h3>China</h3>
+        <p>Beijing is the capital city of China.</p>
+    </div>
+    <div id="russia" class="content">
+        <h3>russia</h3>
+        <p>Moscow is the capital city of russia.</p>
+    </div>
+
+    <script>
+        function change(city, title) {
+
+            let content = document.getElementsByClassName("content")
+            let li = document.getElementsByTagName("li")
+
+            Array.from(content).forEach((element) => {
+                element.style.display = "none"
+            });
+
+            Array.from(li).forEach((element) => {
+                element.style.color = "black"
+            });
+
+            document.getElementById(city).style.display = "block";
+            title.style.color = "red";
+        }
+    </script>
+</body>
+
+</html>

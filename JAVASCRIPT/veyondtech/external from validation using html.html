@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-root {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-root label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-root input:not([type="radio"]):not([type="checkbox"]),
+        .form-root textarea,
+        .form-root .options,
+        .form-root .buttons {
+            max-width: 420px;
+            width: 100%;
+        }
+
+        p {
+            margin-bottom: 25px;
+            color: red;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        .gender-group .options {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .hobbies-group .options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/trivule@latest/dist/index.umd.js"></script>
+</head>
+
+<body>
+    <h1>Form</h1>
+
+    <form method="post" id='form' class="form-root">
+
+        <label for="firstName">First name</label>
+        <input type="text" placeholder="First name ex : pranav" name="fname"
+            data-tr-rules="required|excludes:&esp;|between:3,40|only:string">
+        <p data-tr-feedback="fname"></p>
+
+        <label for="lastName">Last name</label>
+        <input type="text" name="lname" placeholder="Last name ex : smith"
+            data-tr-rules="required|excludes:&esp;|between:3,40|only:string">
+        <p data-tr-feedback="lname"></p>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email ex : abc@gmail.com"
+            data-tr-rules="required|email|excludes:&esp;">
+        <p data-tr-feedback="email"></p>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password ex : Abc@123"
+            data-tr-rules="required|excludes:&esp;|between:8,20">
+        <p data-tr-feedback="password"></p>
+
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" placeholder="Phone ex : 5555555555"
+            data-tr-rules="required|excludes:&esp;|between:10,10|int">
+        <p data-tr-feedback="phone"></p>
+
+        <label for="age">Age</label>
+        <input type="number" name="age" placeholder="Age ex : 25"
+            data-tr-rules="required|excludes:&esp;|int|numberBetween:18,65">
+        <p data-tr-feedback="age"></p>
+
+        <label for="birthDate">Date</label>
+        <input type="date" name="birthDate" data-tr-rules="required|date|dateBetween:1950-01-01,now">
+        <p data-tr-feedback="birthDate"></p>
+
+        <label for="address">Address</label>
+        <textarea name="address" rows="3" cols="40" placeholder="Address ex : 123 Main St, City, State 12345"
+            data-tr-rules="required|minlength:10"></textarea>
+        <p data-tr-feedback="address"></p>
+
+        <label for="zip">ZIP / Postal code</label>
+        <input type="text" name="zip" placeholder="ZIP ex : 12345"
+            data-tr-rules="required|excludes:&esp;|minlength:6|maxlength:10|int">
+        <p data-tr-feedback="zip"></p>
+
+        <div class="gender-group">
+            <label>Gender (select 1)</label>
+            <div class="options">
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="other" checked> Not to say</label>
+            </div>
+        </div>
+
+        <div class="hobbies-group">
+            <label>Hobbies</label>
+            <div class="options">
+                <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+                <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+                <label><input type="checkbox" name="hobbies" value="travel"> Travel</label>
+            </div>
+        </div>
+
+        <label for="profilePic">Upload profile picture</label>
+        <input type="file" name="profilePic" accept="image/*" data-tr-rules="required|file|mimes:image/*">
+        <p data-tr-feedback="profilePic"></p>
+
+        <div class="buttons">
+            <input type="submit" name="submit" value="submit" data-tr-submit>
+            <input type="reset" value="reset">
+        </div>
+    </form>
+
+
+    <script>
+        new TrivuleForm("form");
+
+        // trivuleForm.onSuccess = function () {
+        //     location.reload();
+        // };  // see the next form , use like that
+
+    </script>
+</body>
+
+</html>
