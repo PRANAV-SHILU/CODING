@@ -35,8 +35,6 @@ print("challenge completed")
 
 #exercise 4: working with calender module
 
-# import calendar
-# print(calendar.month(2006,11))
 
 
 # exercise 5: if/else with string.
