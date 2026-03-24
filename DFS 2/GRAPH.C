@@ -6,7 +6,7 @@
   0-----1
   |     |
   |     |
-  3-----2
+  3     2
 */
 int visited[SIZE]={0,0,0,0};
 int arr[SIZE][SIZE]={
