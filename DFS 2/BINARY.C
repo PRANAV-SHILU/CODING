@@ -96,34 +96,42 @@ void update(int val, struct stud *root)
 }
 struct stud *del(int val, struct stud *root)
 {
+	// if root is empty
 	if (root == NULL)
 	{
 		printf("\nTree is empty or data NOT found!\n");
 		return NULL;
 	}
+	// if val less then root's value
 	else if (val < root->roll)
 		root->lp = del(val, root->lp);
+	// if value greter then root's value
 	else if (val > root->roll)
 		root->rp = del(val, root->rp);
+	// main delete operation
 	else
 	{
+		// for leaf node
 		if (root->lp == NULL && root->rp == NULL)
 		{
 			free(root);
 			return NULL;
 		}
+		// for node with one RIGHT child
 		else if (root->lp == NULL && root->rp != NULL)
 		{
 			struct stud *temp = root->rp;
 			free(root);
 			return temp;
 		}
+		// for node with one LEFT node
 		else if (root->rp == NULL && root->lp != NULL)
 		{
 			struct stud *temp = root->lp;
 			free(root);
 			return temp;
 		}
+		// for node with BOTH child node
 		else
 		{
 			struct stud *temp = root->rp;
