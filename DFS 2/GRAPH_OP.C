@@ -2,7 +2,7 @@
 #include <conio.h>
 #define SIZE 5
 #define SOURCE 0
-int graph[SIZE][SIZE], vertex = 0;
+int graph[SIZE][SIZE], vertex = 0; // vertex is for counting number of vertex in graph
 int visited[SIZE];
 void add_vertex()
 {
@@ -11,12 +11,14 @@ void add_vertex()
 	else
 	{
 		int i;
+		// initializing the new row and column as new vertex is added
 		for (i = 0; i <= vertex; i++)
 		{
-			graph[vertex][i] = 0;
+			graph[vertex][i] = 0; 
 			graph[i][vertex] = 0;
 		}
-		vertex++;
+
+		vertex++; // increment vertex count after adding vertex, DON'T FORGET THIS
 		printf("Vertex Count: %d\n", vertex);
 	}
 }
@@ -45,7 +47,7 @@ void remove_vertex()
 		}
 
 		// decrement vertex
-		vertex--;
+		vertex--;  // DON'T FORGET THIS
 		printf("removed vertex.\n");
 	}
 }
@@ -137,6 +139,7 @@ void main()
 				printf("Graph is empty! Add vertices first.\n");
 				break;
 			}
+			// to ensure that all vertex are unvisited before DFS, we have to make all element of visited array 0 again before every DISPLAY call
 			for (i = 0; i < vertex; i++)
 				visited[i] = 0;
 			printf("\nDFS: ");
