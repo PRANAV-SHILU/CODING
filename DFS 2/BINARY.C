@@ -142,7 +142,7 @@ struct stud *del(int val, struct stud *root)
 			root->rp = del(temp->roll, root->rp);
 		}
 	}
-	// this return is because of return type, this return of else part of above of above
+	// this return is because of return type, this is 'return' of above else part
 	return root;
 }
 void main()
