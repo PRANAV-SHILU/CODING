@@ -1,41 +1,40 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
 void main()
 {
-	int i,j,mid,a[5],n,f=0,l=4,found=0;
+	int i, j, mid, a[5], n, f = 0, l = 4, found = 0;
+	// f=first index to search
+	// l=last index to search
+	// mid=middle index to search
 	clrscr();
 
-	for(i=0;i<5;i++)
+	for (i = 0; i < 5; i++)
 	{
-		printf("Enter [%d] : ",i+1);
-		scanf("%d",&a[i]);
+		printf("Enter [%d] : ", i + 1);
+		scanf("%d", &a[i]);
 	}
 
 	printf("\nEnter number to search : ");
-	scanf("%d",&n);
+	scanf("%d", &n);
 
-	while(f<=l)
+	while (f <= l)
 	{
-		mid=(f+l)/2;
+		mid = (f + l) / 2;
 
-		if(a[mid]==n)
+		if (a[mid] == n)
 		{
 			textcolor(GREEN);
 			cprintf("\n\nDATA FOUND !");
-			found=1;
+			found = 1;
 			break;
 		}
-		else if(a[mid]>n)
-		{
-			l=mid-1;
-		}
+		else if (a[mid] > n)
+			l = mid - 1;
 		else
-		{
-			f=mid+1;
-		}
+			f = mid + 1;
 	}
 
-	if(!found)
+	if (!found)
 	{
 		textcolor(RED);
 		cprintf("\n\nDATA NOT FOUND !");
