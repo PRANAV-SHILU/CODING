@@ -70,7 +70,6 @@ void bfs(int start)
 }
 void main()
 {
-	int ch;
 	clrscr();
 
 	// currently visited array is all 0, which means all vertex are unvisited, if we want to use BFS after DFS then we have to make all vertex unvisited again by making all element of visited array 0 again
