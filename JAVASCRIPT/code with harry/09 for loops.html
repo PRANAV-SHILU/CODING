@@ -1,46 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      document.write("For loop<br>");
 
-        document.write("For loop<br>")
+      for (let i = 1; i <= 5; i++) document.write(i + "<br>");
 
-        for (let i = 1; i <= 5; i++)
-            document.write(i + "<br>")
+      //for in loop :  basically prints index of object,.. when use i
+      document.write("<br>For in loop");
 
+      let obj = {
+        pranav: 100,
+        raj: 50,
+        rahul: 10,
+        harsh: 68,
+        jigar: 45,
+      };
 
+      for (i in obj) document.write("<br>Marks of " + i + " is " + obj[i]);
 
-        //for in loop :  basically prints index of object,.. when use i
-        document.write("<br>For in loop")
+      // for of loop : prints value of array or string when use i , doesnot used in object
+      document.write("<br><br>For of loop<br>");
 
-        let obj = {
-            pranav: 100,
-            raj: 50,
-            rahul: 10,
-            harsh: 68,
-            jigar: 45,
-        }
-
-        for (i in obj)
-            document.write("<br>Marks of " + i + " is " + obj[i])
-
-
-
-        // for of loop : prints value of array or string when use i , doesnot used in object
-        document.write("<br><br>For of loop<br>")
-
-        for (i of "pranav")
-            document.write(i + "<br>")
-
-
+      for (i of "pranav") document.write(i + "<br>");
     </script>
-</body>
-
+  </body>
 </html>

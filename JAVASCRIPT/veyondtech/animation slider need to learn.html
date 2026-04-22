@@ -1,178 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #slider {
-            margin: 50px auto;
-            width: 1350px;
+      #slider {
+        margin: 50px auto;
+        width: 1350px;
+      }
+
+      .previous {
+        color: white;
+        background-color: purple;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .next {
+        color: white;
+        background-color: purple;
+        padding: 10px 30px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      #slide1 .previous,
+      #slide3 .next {
+        background-color: gray;
+      }
+
+      .slide {
+        width: 1350px;
+        display: flex;
+        gap: 100px;
+        align-items: center;
+      }
+
+      img {
+        width: 800px;
+        height: 800px;
+      }
+
+      #slide2,
+      #slide3 {
+        display: none;
+      }
+
+      @keyframes slideOutLeft {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
         }
 
-        .previous {
-            color: white;
-            background-color: purple;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
+        100% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+      }
+
+      @keyframes slideInRight {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
         }
 
-        .next {
-            color: white;
-            background-color: purple;
-            padding: 10px 30px;
-            font-size: 20px;
-            cursor: pointer;
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideOutRight {
+        0% {
+          transform: translateX(0);
+          opacity: 1;
         }
 
-        #slide1 .previous,
-        #slide3 .next {
-            background-color: gray;
+        100% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+
+      @keyframes slideInLeft {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
         }
 
-        .slide {
-            width: 1350px;
-            display: flex;
-            gap: 100px;
-            align-items: center;
+        100% {
+          transform: translateX(0);
+          opacity: 1;
         }
+      }
 
-        img {
-            width: 800px;
-            height: 800px;
-        }
+      .slide-out-left {
+        animation: slideOutLeft 0.5s forwards;
+      }
 
-        #slide2,
-        #slide3 {
-            display: none;
-        }
+      .slide-in-right {
+        animation: slideInRight 0.5s forwards;
+      }
 
-        @keyframes slideOutLeft {
-            0% {
-                transform: translateX(0);
-                opacity: 1;
-            }
+      .slide-out-right {
+        animation: slideOutRight 0.5s forwards;
+      }
 
-            100% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-        }
-
-        @keyframes slideInRight {
-            0% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideOutRight {
-            0% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
-
-        @keyframes slideInLeft {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .slide-out-left {
-            animation: slideOutLeft 0.5s forwards;
-        }
-
-        .slide-in-right {
-            animation: slideInRight 0.5s forwards;
-        }
-
-        .slide-out-right {
-            animation: slideOutRight 0.5s forwards;
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 0.5s forwards;
-        }
+      .slide-in-left {
+        animation: slideInLeft 0.5s forwards;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <div id="slider">
+      <div id="slide1" class="slide">
+        <button class="previous">Previous</button>
+        <img src="img1.jpg" id="img1" alt="image 1" />
+        <button class="next" onclick="nextSlide(this)">Next</button>
+      </div>
 
-        <div id="slide1" class="slide">
-            <button class="previous">Previous</button>
-            <img src="img1.jpg" id="img1" alt="image 1">
-            <button class="next" onclick="nextSlide(this)">Next</button>
-        </div>
+      <div id="slide2" class="slide">
+        <button class="previous" onclick="backSlide(this)">Previous</button>
+        <img src="img2.gif" id="img2" alt="image 2" />
+        <button class="next" onclick="nextSlide(this)">Next</button>
+      </div>
 
-        <div id="slide2" class="slide">
-            <button class="previous" onclick="backSlide(this)">Previous</button>
-            <img src="img2.gif" id="img2" alt="image 2">
-            <button class="next" onclick="nextSlide(this)">Next</button>
-        </div>
-
-        <div id="slide3" class="slide">
-            <button class="previous" onclick="backSlide(this)">Previous</button>
-            <img src="img3.jpg" id="img3" alt="image 3">
-            <button class="next">Next</button>
-        </div>
-
+      <div id="slide3" class="slide">
+        <button class="previous" onclick="backSlide(this)">Previous</button>
+        <img src="img3.jpg" id="img3" alt="image 3" />
+        <button class="next">Next</button>
+      </div>
     </div>
 
-
     <script>
-        function nextSlide(e) {
-            let currentSlide = e.parentElement;
-            let nextSlide = currentSlide.nextElementSibling;
+      function nextSlide(e) {
+        let currentSlide = e.parentElement;
+        let nextSlide = currentSlide.nextElementSibling;
 
-            currentSlide.classList.add('slide-out-left');
-            currentSlide.style.display = "none";
-            nextSlide.style.display = "flex";
-            nextSlide.classList.add('slide-in-right');
+        currentSlide.classList.add("slide-out-left");
+        currentSlide.style.display = "none";
+        nextSlide.style.display = "flex";
+        nextSlide.classList.add("slide-in-right");
 
-            setTimeout(() => {
-                currentSlide.classList.remove('slide-out-left');
-                nextSlide.classList.remove('slide-in-right');
-            }, 500); // match animation duration
-        }
+        setTimeout(() => {
+          currentSlide.classList.remove("slide-out-left");
+          nextSlide.classList.remove("slide-in-right");
+        }, 500); // match animation duration
+      }
 
-        function backSlide(e) {
-            let currentSlide = e.parentElement;
-            let prevSlide = currentSlide.previousElementSibling;
+      function backSlide(e) {
+        let currentSlide = e.parentElement;
+        let prevSlide = currentSlide.previousElementSibling;
 
-            currentSlide.classList.add('slide-out-right');
-            currentSlide.style.display = "none";
-            prevSlide.style.display = "flex";
-            prevSlide.classList.add('slide-in-left');
+        currentSlide.classList.add("slide-out-right");
+        currentSlide.style.display = "none";
+        prevSlide.style.display = "flex";
+        prevSlide.classList.add("slide-in-left");
 
-            setTimeout(() => {
-                currentSlide.classList.remove('slide-out-right');
-                prevSlide.classList.remove('slide-in-left');
-            }, 500);
-        }
+        setTimeout(() => {
+          currentSlide.classList.remove("slide-out-right");
+          prevSlide.classList.remove("slide-in-left");
+        }, 500);
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

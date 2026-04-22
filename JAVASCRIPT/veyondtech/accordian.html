@@ -1,70 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <style>
     body {
-        margin: 50px 0 0 50px;
+      margin: 50px 0 0 50px;
     }
 
     .container {
-        display: grid;
-        gap: 30px;
+      display: grid;
+      gap: 30px;
     }
 
     .content {
-        padding: 0 10px;
-        border: 2px solid gray;
-        max-width: 300px;
+      padding: 0 10px;
+      border: 2px solid gray;
+      max-width: 300px;
     }
 
     p {
-        display: none;
+      display: none;
     }
 
     h3 {
-        cursor: pointer;
+      cursor: pointer;
     }
-</style>
+  </style>
 
-<body>
-
+  <body>
     <h1>Accordian</h1>
 
     <div class="container">
-
-        <div class="content">
-            <h3 onclick="display('india')">India</h3>
-            <p id="india">Delhi is the capital city of India.</p>
-        </div>
-        <div class="content">
-            <h3 onclick="display('china')">China</h3>
-            <p id="china">Beijing is the capital city of China.</p>
-        </div>
-        <div class="content">
-            <h3 onclick="display('russia')">russia</h3>
-            <p id="russia">Moscow is the capital city of russia.</p>
-        </div>
-
+      <div class="content">
+        <h3 onclick="display('india')">India</h3>
+        <p id="india">Delhi is the capital city of India.</p>
+      </div>
+      <div class="content">
+        <h3 onclick="display('china')">China</h3>
+        <p id="china">Beijing is the capital city of China.</p>
+      </div>
+      <div class="content">
+        <h3 onclick="display('russia')">russia</h3>
+        <p id="russia">Moscow is the capital city of russia.</p>
+      </div>
     </div>
 
     <script>
-        function display(city) {
-            let p = document.getElementsByTagName("p")
+      function display(city) {
+        let p = document.getElementsByTagName("p");
 
-            Array.from(p).forEach((element) => {
-                element.style.display = "none"
-                element.previousElementSibling.style.color = "black"
-            });
+        Array.from(p).forEach((element) => {
+          element.style.display = "none";
+          element.previousElementSibling.style.color = "black";
+        });
 
-            document.getElementById(city).style.display = "block";
-            document.getElementById(city).previousElementSibling.style.color = "red"
-        }
+        document.getElementById(city).style.display = "block";
+        document.getElementById(city).previousElementSibling.style.color =
+          "red";
+      }
     </script>
-</body>
-
+  </body>
 </html>

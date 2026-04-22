@@ -1,40 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        let name = "Harry"  // strings doesn't get changed using method as string is immutable, you use new variable for it, vari=str.upr()
+      let name = "Harry"; // strings doesn't get changed using method as string is immutable, you use new variable for it, vari=str.upr()
 
-        console.log(name)                               //returns string
-        console.log(name.length)                       //returns length of string
-        console.log(name.toUpperCase())               // returns uppercase stirng
-        console.log(name.toLowerCase())              // returns lowercase string
-        console.log(name.slice(2, 4))               // prints from 2nd index to < 4th index
-        console.log(name.slice(2))                 // returns from 2nd index to the null(whole)
-        console.log(name.replace("Har", "Per"))   //replace Har with Per
+      console.log(name); //returns string
+      console.log(name.length); //returns length of string
+      console.log(name.toUpperCase()); // returns uppercase stirng
+      console.log(name.toLowerCase()); // returns lowercase string
+      console.log(name.slice(2, 4)); // prints from 2nd index to < 4th index
+      console.log(name.slice(2)); // returns from 2nd index to the null(whole)
+      console.log(name.replace("Har", "Per")); //replace Har with Per
 
+      let frd = "     meena     deshmukh      ";
+      console.log(frd);
+      console.log(frd.trim()); // remove unneccessary space from begining and ending
 
-        let frd = "     meena     deshmukh      "
-        console.log(frd)
-        console.log(frd.trim())       // remove unneccessary space from begining and ending
+      let friend = "Naman";
+      console.log(name.concat(" is a friend of ", friend, " Okay")); //returns concated stirngs as one string
 
-        let friend = "Naman"
-        console.log(name.concat(" is a friend of ", friend, " Okay"))    //returns concated stirngs as one string
+      let merge = name + " yaahooo " + friend; // can combine multiple string into one
+      console.log(merge);
 
-
-        let merge = name + " yaahooo " + friend;   // can combine multiple string into one
-        console.log(merge)
-
-        for (i = 0; i < name.length; i++)
-            console.log(name[i])                    // name[0],name[1],..
-
+      for (i = 0; i < name.length; i++) console.log(name[i]); // name[0],name[1],..
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,34 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body><!-- comment -->
+  <body>
+    <!-- comment -->
     <nav>
-        <ul>
-            <li onclick="changeBgRed()">Home</li>
-            <li>About</li>
-            <li>Hire me</li>
-        </ul>
+      <ul>
+        <li onclick="changeBgRed()">Home</li>
+        <li>About</li>
+        <li>Hire me</li>
+      </ul>
     </nav>
 
     <div class="container">
-        <p>Hey i am a good boy!</p>
+      <p>Hey i am a good boy!</p>
     </div>
 
     <script>
-        let b = document.body;
-        console.log("First child of b is ", b.firstChild);
-        console.log("First element child of b is ", b.firstElementChild);
+      let b = document.body;
+      console.log("First child of b is ", b.firstChild);
+      console.log("First element child of b is ", b.firstElementChild);
 
-        const changeBgRed = () => {
-            document.body.firstElementChild.style.background = "red";
-        }
+      const changeBgRed = () => {
+        document.body.firstElementChild.style.background = "red";
+      };
     </script>
-</body>
-
+  </body>
 </html>

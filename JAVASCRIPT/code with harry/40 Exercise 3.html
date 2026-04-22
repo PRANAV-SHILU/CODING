@@ -1,84 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #jokebox {
-            margin: 100px auto;
-            height: fit-content;
-            width: fit-content;
-            border: 2px solid black;
-            padding: 20px;
-        }
+      #jokebox {
+        margin: 100px auto;
+        height: fit-content;
+        width: fit-content;
+        border: 2px solid black;
+        padding: 20px;
+      }
 
-        button {
-            background-color: blue;
-            color: white;
-            margin: 0px auto;
-            padding: 9px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: bold;
-            display: block;
-            cursor: pointer;
-        }
+      button {
+        background-color: blue;
+        color: white;
+        margin: 0px auto;
+        padding: 9px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: bold;
+        display: block;
+        cursor: pointer;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="jokebox"></div>
 
-    <button onclick="newJoke();">😁Generate a new JOke🤣</button>
+    <button onclick="newJoke()">😁Generate a new JOke🤣</button>
 
     <script>
+      function newJoke() {
+        jokeBox = document.getElementById("jokebox");
 
-        function newJoke() {
+        const jokesArray = [
+          "Why don't scientists trust atoms? Because they make up everything! 😂🔬",
+          "I used to be a banker but I lost interest. 💸😅",
+          "I'm reading a book about anti-gravity — it's impossible to put down! 📚🚀",
+          "Knock knock. Who's there? Lettuce. Lettuce who? Lettuce in, it's cold out here! 🥬🤣",
+          "Parallel lines have so much in common. It's a shame they'll never meet. ➖➖😢",
+          "Why do programmers prefer dark mode? Because light attracts bugs. 🐛💡",
+          "Why was the equal sign so humble? Because it knew it wasn't less than or greater than. =️⃣🙂",
+          "What do you call a fish wearing a bowtie? Sofishticated. 🐟🎀",
+          "I would tell you a joke about pizza, but it's a little cheesy. 🍕🧀",
+          "My computer told me to 'press any key' — so I pressed the escape key. 🖥️⎋",
+          "How do you organize a space party? You planet. 🌌🎉",
+          "Why did the scarecrow win an award? Because he was outstanding in his field. 🌾🏆",
+          "What do you call fake spaghetti? An impasta. 🍝😆",
+          "I told my suitcase there would be no vacation this year — now it's full of emotional baggage. 🧳😅",
+          "Why don't skeletons fight each other? They don't have the guts. ☠️😄",
+          "Why did the math book look sad? It had too many problems. ➗📘",
+          "How does a penguin build its house? Igloos it together. 🐧🏠",
+          "I asked the librarian if the library had books on paranoia. She whispered, 'They're right behind you.' 📚👀",
+          "Why did the coffee file a police report? It got mugged. ☕🚨",
+          "Why don't eggs tell jokes? They'd crack each other up. 🥚🤣",
+          "What did one wall say to the other wall? I'll meet you at the corner. 🧱↪️",
+          "Why did the bicycle fall over? It was two-tired. 🚲😮‍💨",
+          "I told my phone I needed more space — it opened a new tab. 📱🌌",
+          "Why did the tomato blush? Because it saw the salad dressing. 🍅😳",
+          "What do you call a bear with no teeth? A gummy bear. 🐻🍬",
+          "Why did the cookie go to the doctor? Because it felt crummy. 🍪🤒",
+          "What's brown and sticky? A stick. 🌲😄",
+          "Why do bees have sticky hair? Because they use honeycombs. 🐝🍯",
+          "Why did the computer go to therapy? Too many tabs open. 💻🫥",
+          "How do you catch a squirrel? Climb a tree and act like a nut. 🐿️🌰",
+        ];
 
-            jokeBox = document.getElementById("jokebox");
+        let randomJokeIndex = Math.floor(Math.random() * jokesArray.length - 1);
 
-            const jokesArray = [
-                "Why don't scientists trust atoms? Because they make up everything! 😂🔬",
-                "I used to be a banker but I lost interest. 💸😅",
-                "I'm reading a book about anti-gravity — it's impossible to put down! 📚🚀",
-                "Knock knock. Who's there? Lettuce. Lettuce who? Lettuce in, it's cold out here! 🥬🤣",
-                "Parallel lines have so much in common. It's a shame they'll never meet. ➖➖😢",
-                "Why do programmers prefer dark mode? Because light attracts bugs. 🐛💡",
-                "Why was the equal sign so humble? Because it knew it wasn't less than or greater than. =️⃣🙂",
-                "What do you call a fish wearing a bowtie? Sofishticated. 🐟🎀",
-                "I would tell you a joke about pizza, but it's a little cheesy. 🍕🧀",
-                "My computer told me to 'press any key' — so I pressed the escape key. 🖥️⎋",
-                "How do you organize a space party? You planet. 🌌🎉",
-                "Why did the scarecrow win an award? Because he was outstanding in his field. 🌾🏆",
-                "What do you call fake spaghetti? An impasta. 🍝😆",
-                "I told my suitcase there would be no vacation this year — now it's full of emotional baggage. 🧳😅",
-                "Why don't skeletons fight each other? They don't have the guts. ☠️😄",
-                "Why did the math book look sad? It had too many problems. ➗📘",
-                "How does a penguin build its house? Igloos it together. 🐧🏠",
-                "I asked the librarian if the library had books on paranoia. She whispered, 'They're right behind you.' 📚👀",
-                "Why did the coffee file a police report? It got mugged. ☕🚨",
-                "Why don't eggs tell jokes? They'd crack each other up. 🥚🤣",
-                "What did one wall say to the other wall? I'll meet you at the corner. 🧱↪️",
-                "Why did the bicycle fall over? It was two-tired. 🚲😮‍💨",
-                "I told my phone I needed more space — it opened a new tab. 📱🌌",
-                "Why did the tomato blush? Because it saw the salad dressing. 🍅😳",
-                "What do you call a bear with no teeth? A gummy bear. 🐻🍬",
-                "Why did the cookie go to the doctor? Because it felt crummy. 🍪🤒",
-                "What's brown and sticky? A stick. 🌲😄",
-                "Why do bees have sticky hair? Because they use honeycombs. 🐝🍯",
-                "Why did the computer go to therapy? Too many tabs open. 💻🫥",
-                "How do you catch a squirrel? Climb a tree and act like a nut. 🐿️🌰"
-            ];
-
-            let randomJokeIndex = Math.floor(Math.random() * jokesArray.length - 1);
-
-            jokeBox.innerHTML = jokesArray[randomJokeIndex];
-
-        }
+        jokeBox.innerHTML = jokesArray[randomJokeIndex];
+      }
     </script>
-</body>
-
+  </body>
 </html>

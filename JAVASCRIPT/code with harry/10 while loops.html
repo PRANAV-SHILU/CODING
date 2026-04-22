@@ -1,29 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      document.write("<br>while loop <br>");
+      let i = 1;
+      while (i <= 10) document.write(i++ + "<br>"); //  print + post increament + <br>
 
-        document.write("<br>while loop <br>")
-        let i = 1;
-        while (i <= 10)
-            document.write(i++ + "<br>")  //  print + post increament + <br>
-
-
-            
-        document.write("<br>Do while loop <br>")
-        i = 1;
-        do {
-            document.write(i++ + "<br>")
-        } while (i <= 10)
-
+      document.write("<br>Do while loop <br>");
+      i = 1;
+      do {
+        document.write(i++ + "<br>");
+      } while (i <= 10);
     </script>
-</body>
-
+  </body>
 </html>

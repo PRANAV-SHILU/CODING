@@ -1,40 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        //array is mutable, can changable
+      //array is mutable, can changable
 
-        let marks = [45, 68, 89, 57, false, "Not present"]
+      let marks = [45, 68, 89, 57, false, "Not present"];
 
-        console.log(marks)
-        console.log("length = ",marks.length)
-        console.log(typeof marks)
+      console.log(marks);
+      console.log("length = ", marks.length);
+      console.log(typeof marks);
 
-        console.log(marks[0])
-        console.log(marks[1])
-        console.log(marks[2])
-        console.log(marks[3])
-        console.log(marks[4])
-        console.log(marks[5])
-        console.log(marks[6])  //undefined as no 6th index 
+      console.log(marks[0]);
+      console.log(marks[1]);
+      console.log(marks[2]);
+      console.log(marks[3]);
+      console.log(marks[4]);
+      console.log(marks[5]);
+      console.log(marks[6]); //undefined as no 6th index
 
-        marks[6]=89
-        console.log("Added ",marks[6])
+      marks[6] = 89;
+      console.log("Added ", marks[6]);
 
-        marks[0]=50
-        console.log("changed",marks[0])
+      marks[0] = 50;
+      console.log("changed", marks[0]);
 
-        console.log(marks)
-
-
+      console.log(marks);
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,47 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      let num = [1, 2, 3, 4, 5];
 
-        let num = [1, 2, 3, 4, 5]
+      console.log("For loop with array");
+      for (let i = 0; i < num.length; i++) {
+        console.log(num[i]);
+      }
 
-        console.log("For loop with array")
-        for (let i = 0; i < num.length; i++) {
-            console.log(num[i]);
-        }
+      console.log("for of loop : prints value");
+      for (i of num) {
+        console.log(i);
+      }
 
-        console.log("for of loop : prints value")
-        for (i of num) {
-            console.log(i);
-        }
+      console.log("for in loop : prints index");
+      for (i in num) {
+        console.log(i, num[i]);
+      }
 
-        console.log("for in loop : prints index")
-        for (i in num) {
-            console.log(i, num[i])
-        }
+      // before using html collection using foreach you have to conver it to array using array.from method
+      console.log("For each loop");
+      num.forEach((element) => {
+        console.log(element);
+      });
 
-        // before using html collection using foreach you have to conver it to array using array.from method
-        console.log("For each loop")
-        num.forEach((element) => {
-            console.log(element)
-        });
-
-        console.log("Array from ")   // converts string or object or HTML COLLECTION into array
-        let name = "Harry"
-        let arr = Array.from(name)
-        console.log(name, arr);
-
-        
-
-
+      console.log("Array from "); // converts string or object or HTML COLLECTION into array
+      let name = "Harry";
+      let arr = Array.from(name);
+      console.log(name, arr);
     </script>
-</body>
-
+  </body>
 </html>

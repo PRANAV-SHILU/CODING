@@ -1,254 +1,308 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation Using JS</title>
     <style>
-        .invalid-feedback {
-            color: red;
-            margin-bottom: 10px;
-        }
+      .invalid-feedback {
+        color: red;
+        margin-bottom: 10px;
+      }
 
-        .form-root {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            max-width: 680px;
-            margin: 0 auto;
-        }
+      .form-root {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: 680px;
+        margin: 0 auto;
+      }
 
-        .form-root label {
-            display: block;
-            margin-bottom: 5px;
-        }
+      .form-root label {
+        display: block;
+        margin-bottom: 5px;
+      }
 
-        .form-root input:not([type="radio"]):not([type="checkbox"]),
-        .form-root textarea,
-        .form-root .options,
-        .form-root .buttons {
-            max-width: 420px;
-            width: 100%;
-        }
+      .form-root input:not([type="radio"]):not([type="checkbox"]),
+      .form-root textarea,
+      .form-root .options,
+      .form-root .buttons {
+        max-width: 420px;
+        width: 100%;
+      }
 
-        p {
-            margin-bottom: 25px;
-            color: red;
-        }
+      p {
+        margin-bottom: 25px;
+        color: red;
+      }
 
-        label {
-            margin-top: 10px;
-        }
+      label {
+        margin-top: 10px;
+      }
 
-        .gender-group .options {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
+      .gender-group .options {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
 
-        .hobbies-group .options {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
+      .hobbies-group .options {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
 
-        .buttons {
-            display: flex;
-            gap: 8px;
-            max-width: 420px;
-            width: 100%;
-        }
+      .buttons {
+        display: flex;
+        gap: 8px;
+        max-width: 420px;
+        width: 100%;
+      }
 
-        h1 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
+      h1 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
 
-        p {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
+      p {
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
 
-        .error {
-            border: 1px solid red !important;
-        }
+      .error {
+        border: 1px solid red !important;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/trivule@latest/dist/index.umd.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Form</h1>
 
-    <form method="post" id='form' class="form-root">
+    <form method="post" id="form" class="form-root">
+      <label for="firstName">First name</label>
+      <div>
+        <input
+          type="text"
+          placeholder="First name ex : pranav"
+          id="fname"
+          name="fname"
+        />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="firstName">First name</label>
-        <div>
-            <input type="text" placeholder="First name ex : pranav" id="fname" name="fname">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="lastName">Last name</label>
+      <div>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Last name ex : smith"
+        />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="lastName">Last name</label>
-        <div>
-            <input type="text" id="lname" name="lname" placeholder="Last name ex : smith">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="email">Email</label>
+      <div>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email ex : abc@gmail.com"
+        />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="email">Email</label>
-        <div>
-            <input type="email" id="email" name="email" placeholder="Email ex : abc@gmail.com">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="password">Password</label>
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password ex : Abc@123"
+        />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="password">Password</label>
-        <div>
-            <input type="password" id="password" name="password" placeholder="Password ex : Abc@123">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="phone">Phone</label>
+      <div>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone ex : 5555555555"
+        />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="phone">Phone</label>
-        <div>
-            <input type="tel" id="phone" name="phone" placeholder="Phone ex : 5555555555">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="age">Age</label>
+      <div>
+        <input type="number" id="age" name="age" placeholder="Age ex : 25" />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="age">Age</label>
-        <div>
-            <input type="number" id="age" name="age" placeholder="Age ex : 25">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="birthDate">Date</label>
+      <div>
+        <input type="date" id="birthdate" name="birthdate" />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="birthDate">Date</label>
-        <div>
-            <input type="date" id="birthdate" name="birthdate">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="address">Address</label>
+      <div>
+        <textarea
+          id="address"
+          name="address"
+          rows="3"
+          cols="40"
+          placeholder="Address ex : 123 Main St, City, State 12345"
+        ></textarea>
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="address">Address</label>
-        <div>
-            <textarea id="address" name="address" rows="3" cols="40"
-                placeholder="Address ex : 123 Main St, City, State 12345"></textarea>
-            <div class="invalid-feedback"></div>
-        </div>
+      <label for="zip">ZIP / Postal code</label>
+      <div>
+        <input type="text" id="zip" name="zip" placeholder="ZIP ex : 12345" />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="zip">ZIP / Postal code</label>
-        <div>
-            <input type="text" id="zip" name="zip" placeholder="ZIP ex : 12345">
-            <div class="invalid-feedback"></div>
-        </div>
+      <label>Gender (select 1)</label>
+      <div class="options">
+        <label
+          ><input type="radio" id="gender" name="gender" value="female" />
+          Female</label
+        >
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label
+          ><input type="radio" name="gender" value="other" checked /> Not to
+          say</label
+        >
+      </div>
 
-        <label>Gender (select 1)</label>
+      <div class="hobbies-group">
+        <label>Hobbies</label>
         <div class="options">
-            <label><input type="radio" id="gender" name="gender" value="female"> Female</label>
-            <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="other" checked> Not to say</label>
+          <label
+            ><input
+              type="checkbox"
+              id="hobbies"
+              name="hobbies"
+              value="reading"
+            />
+            Reading</label
+          >
+          <label
+            ><input type="checkbox" name="hobbies" value="sports" />
+            Sports</label
+          >
+          <label
+            ><input type="checkbox" name="hobbies" value="music" /> Music</label
+          >
+          <label
+            ><input type="checkbox" name="hobbies" value="travel" />
+            Travel</label
+          >
         </div>
+      </div>
 
-        <div class="hobbies-group">
-            <label>Hobbies</label>
-            <div class="options">
-                <label><input type="checkbox" id="hobbies" name="hobbies" value="reading"> Reading</label>
-                <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
-                <label><input type="checkbox" name="hobbies" value="music"> Music</label>
-                <label><input type="checkbox" name="hobbies" value="travel"> Travel</label>
-            </div>
-        </div>
+      <label for="profilePic">Upload profile picture</label>
+      <div>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+        <div class="invalid-feedback"></div>
+      </div>
 
-        <label for="profilePic">Upload profile picture</label>
-        <div>
-            <input type="file" id="profilePic" name="profilePic" accept="image/*">
-            <div class="invalid-feedback"></div>
-        </div>
-
-        <div class="buttons">
-            <input type="submit" name="submit" id="submit" value="submit" data-tr-submit>
-            <input type="reset" value="reset">
-        </div>
+      <div class="buttons">
+        <input
+          type="submit"
+          name="submit"
+          id="submit"
+          value="submit"
+          data-tr-submit
+        />
+        <input type="reset" value="reset" />
+      </div>
     </form>
 
-
     <script>
-        
-        const trivuleForm = new TrivuleForm("form", {
-            feedbackSelector: ".invalid-feedback",
-        });
+      const trivuleForm = new TrivuleForm("form", {
+        feedbackSelector: ".invalid-feedback",
+      });
 
-        trivuleForm.make({
-            fname: {
-                rules: "required|excludes:&esp;|only:string|between:3,40",
-                messages: {
-                    required: "This field is mandatory",
-                    excludes: "You can't add blank spaces",
-                    between: "length must be between 3 to 40",
-                    only: "You can only add alphbets neither number nor special character",
-                }
-            },
-            lname: {
-                rules: "required|excludes:&esp;|only:string|between:3,40",
-                messages: {
-                    excludes: "You can't add blank spaces",
-                    between: "length must be between 3 to 40",
-                    only: "You can only add alphbets neither number nor special character",
-                }
-            },
-            email: {
-                rules: "required|excludes:&esp;|email",
-                messages: "Email is required|You can not add blank space in email|Enter a valid email address"
-            },
-            password: {
-                rules: "required|excludes:&esp;|between:8,25",
-                messages: "this field is required|You can not add blank space|length must be between 8 to 25"
-            },
-            phone: {
-                rules: "required|excludes:&esp;|between:10,10|int",
-                messages: {
-                    excludes: "You can't add blank spaces",
-                    between: "Number must be only 10 digit long",
-                    int: "You can only enter numbers",
-                }
-            },
-            age: {
-                rules: "required|excludes:&esp;|int|numberBetween:18,65",
-                messages: {
-                    excludes: "You can't add blank spaces",
-                    numberBetween: "Age must be between 18 to 65",
-                    int: "You can only enter numaric value",
-                }
-            },
-            birthdate: {
-                rules: "required|date|dateBetween:1950-01-01,now",
-                messages: {
-                    dateBetween: "The date must be between 1950-01-01 and today",
-                }
-            },
-            address: {
-                rules: "required|minlength:10",
-                messages: "this field is required|address must be atleast 10 characters long",
-            },
-            zip: {
-                rules: "required|excludes:&esp;|minlength:6|maxlength:10|int",
-                messages: {
-                    excludes: "You can't add blank spaces",
-                    minlength: "minimum 6 digit zip code is required",
-                    maxlength: "maximum 10 digit zip code can be inserted",
+      trivuleForm.make({
+        fname: {
+          rules: "required|excludes:&esp;|only:string|between:3,40",
+          messages: {
+            required: "This field is mandatory",
+            excludes: "You can't add blank spaces",
+            between: "length must be between 3 to 40",
+            only: "You can only add alphbets neither number nor special character",
+          },
+        },
+        lname: {
+          rules: "required|excludes:&esp;|only:string|between:3,40",
+          messages: {
+            excludes: "You can't add blank spaces",
+            between: "length must be between 3 to 40",
+            only: "You can only add alphbets neither number nor special character",
+          },
+        },
+        email: {
+          rules: "required|excludes:&esp;|email",
+          messages:
+            "Email is required|You can not add blank space in email|Enter a valid email address",
+        },
+        password: {
+          rules: "required|excludes:&esp;|between:8,25",
+          messages:
+            "this field is required|You can not add blank space|length must be between 8 to 25",
+        },
+        phone: {
+          rules: "required|excludes:&esp;|between:10,10|int",
+          messages: {
+            excludes: "You can't add blank spaces",
+            between: "Number must be only 10 digit long",
+            int: "You can only enter numbers",
+          },
+        },
+        age: {
+          rules: "required|excludes:&esp;|int|numberBetween:18,65",
+          messages: {
+            excludes: "You can't add blank spaces",
+            numberBetween: "Age must be between 18 to 65",
+            int: "You can only enter numaric value",
+          },
+        },
+        birthdate: {
+          rules: "required|date|dateBetween:1950-01-01,now",
+          messages: {
+            dateBetween: "The date must be between 1950-01-01 and today",
+          },
+        },
+        address: {
+          rules: "required|minlength:10",
+          messages:
+            "this field is required|address must be atleast 10 characters long",
+        },
+        zip: {
+          rules: "required|excludes:&esp;|minlength:6|maxlength:10|int",
+          messages: {
+            excludes: "You can't add blank spaces",
+            minlength: "minimum 6 digit zip code is required",
+            maxlength: "maximum 10 digit zip code can be inserted",
+          },
+        },
+        profilePic: {
+          rules: "required|file|mimes:image/*",
+          messages: {
+            file: "only valid files are available, images only",
+            mimes: "you can only add image",
+          },
+        },
+      });
 
-                }
-            },
-            profilePic: {
-                rules: "required|file|mimes:image/*",
-                messages: {
-                    file: "only valid files are available, images only",
-                    mimes: "you can only add image"
-                }
-            },
-        });
-
-        trivuleForm.onSuccess = function () {
-            location.reload();
-        };
-
+      trivuleForm.onSuccess = function () {
+        location.reload();
+      };
     </script>
-</body>
-
+  </body>
 </html>

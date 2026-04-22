@@ -1,34 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        console.time("Process p1")          //time starts , label must be same, here label is 'process p1'
+      console.time("Process p1"); //time starts , label must be same, here label is 'process p1'
 
-        console.log("THis is console log")
-        console.error("This is console error")
-        console.warn("This is console warning")
-        console.info("This is console info")
+      console.log("THis is console log");
+      console.error("This is console error");
+      console.warn("This is console warning");
+      console.info("This is console info");
 
-        console.assert(5 > 33) //checks expression and give error only if it is wrong
+      console.assert(5 > 33); //checks expression and give error only if it is wrong
 
-        // console.clear()
+      // console.clear()
 
-        let obj = {
-            a: 1,
-            b: 2,
-            c: 3,
-        }
-        console.table(obj)
+      let obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+      };
+      console.table(obj);
 
-        console.timeEnd("Process p1")       //time ends, label must be same
+      console.timeEnd("Process p1"); //time ends, label must be same
     </script>
-</body>
-
+  </body>
 </html>

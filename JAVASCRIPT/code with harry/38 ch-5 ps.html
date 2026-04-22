@@ -1,62 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        nav {
-            background-color: cyan;
-        }
+      nav {
+        background-color: cyan;
+      }
 
-        ul {
-            display: flex;
-            gap: 30px;
-        }
+      ul {
+        display: flex;
+        gap: 30px;
+      }
 
-        li {
-            list-style-type: none;
-        }
+      li {
+        list-style-type: none;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <ul>
-            <li>home</li>
-            <li>contact</li>
-            <li>about</li>
-            <li>okay</li>
-        </ul>
+      <ul>
+        <li>home</li>
+        <li>contact</li>
+        <li>about</li>
+        <li>okay</li>
+      </ul>
     </nav>
 
     <table>
-        <tr>
-            <td>hello 1</td>
-            <td>hello 2</td>
-            <td>hello 3</td>
-            <td>hello 4</td>
-            <td>hello 5</td>
-        </tr>
+      <tr>
+        <td>hello 1</td>
+        <td>hello 2</td>
+        <td>hello 3</td>
+        <td>hello 4</td>
+        <td>hello 5</td>
+      </tr>
     </table>
 
     <script>
-        document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red"
+      document.getElementsByTagName("nav")[0].firstElementChild.style.color =
+        "red";
 
-        document.getElementsByTagName("nav")[0].firstElementChild.lastElementChild.style.color = "green"
+      document.getElementsByTagName(
+        "nav",
+      )[0].firstElementChild.lastElementChild.style.color = "green";
 
-
-        // used array.from method so that all li first converted into array so that foreach can work
-        Array.from(document.getElementsByTagName("li")).forEach((element) => {
-            element.style.background = "yellow"
-        });
+      // used array.from method so that all li first converted into array so that foreach can work
+      Array.from(document.getElementsByTagName("li")).forEach((element) => {
+        element.style.background = "yellow";
+      });
     </script>
-</body>
-
+  </body>
 </html>

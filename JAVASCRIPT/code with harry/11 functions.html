@@ -1,41 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      console.log("Introduction to Functions");
 
-        console.log("Introduction to Functions")
+      function avg(x, y) {
+        return x + y / 2;
+      }
 
-        function avg(x, y) {
-            return (x + y / 2)
-        }
+      let x = 1,
+        y = 2,
+        z = 3;
 
-        let x = 1, y = 2, z = 3;
+      console.log(avg(x, y));
+      console.log(avg(x, z));
+      console.log(avg(z, y));
+      console.log(avg); // prints function code
 
-        console.log(avg(x, y))
-        console.log(avg(x, z))
-        console.log(avg(z, y))
-        console.log(avg)   // prints function code
+      //arrow function
+      console.log("arrow function");
 
+      const sum = (a, b) => {
+        // without argument : const sum = () =>{}
+        return a + b;
+      }; // sum is not a variable it is a function
 
-
-        //arrow function
-        console.log("arrow function")
-
-        const sum = (a, b) => {   // without argument : const sum = () =>{}
-            return a + b
-        }  // sum is not a variable it is a function
-
-        console.log(sum(x, y))  //print returned value
-        console.log(sum)        // prints function code
-
+      console.log(sum(x, y)); //print returned value
+      console.log(sum); // prints function code
     </script>
-</body>
-
+  </body>
 </html>

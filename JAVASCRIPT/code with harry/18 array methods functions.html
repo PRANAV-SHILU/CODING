@@ -1,56 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        //delete and type of are a operator
+      //delete and type of are a operator
 
-        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        console.log("array", a)
+      let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log("array", a);
 
-        delete a[0]
-        console.log("delete", a)  //length remains same, insert 'empty' to the place of deleted element
+      delete a[0];
+      console.log("delete", a); //length remains same, insert 'empty' to the place of deleted element
 
+      let a_more = [10, 20, 30, 40, 50, 60];
+      let new_array = a.concat(a_more);
+      console.log("concate", new_array);
 
-        let a_more = [10, 20, 30, 40, 50, 60]
-        let new_array = a.concat(a_more)
-        console.log("concate", new_array)
+      num = [5, 9, 7, 2, 222, 4, 6, 66, 2, 8, 5, 5, 5];
+      num.sort(); // sort is alphabatic not numbaric , ascending
+      console.log("sort", num);
 
+      //important
+      const compare = (a, b) => {
+        return a - b; // b-a for descending as numbaric (not alphabatic)
+      };
+      num.sort(compare);
+      console.log("a-b compare", num);
 
-        num = [5, 9, 7, 2, 222, 4, 6, 66, 2, 8, 5, 5, 5,]
-        num.sort()      // sort is alphabatic not numbaric , ascending
-        console.log("sort", num)
+      num.sort((a, b) => b - a); //descending
+      console.log("b-a compare", num);
 
+      console.log("reverse", num.reverse()); //reverse the array
 
-        //important
-        const compare = (a, b) => {
-            return a - b;  // b-a for descending as numbaric (not alphabatic)
-        }
-        num.sort(compare)
-        console.log("a-b compare", num)
+      // splice and slice
+      num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log("Before splice", num);
+      num.splice(2, 3, 102, 103, 104, 105, 106); //(start,how many to delete from 2, add as want....) , returns deleted value if use vari
+      console.log("after splice", num);
 
-        num.sort((a, b) => b - a)  //descending
-        console.log("b-a compare", num)
-
-        console.log("reverse", num.reverse())   //reverse the array
-
-        // splice and slice
-        num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        console.log("Before splice", num)
-        num.splice(2, 3, 102, 103, 104, 105, 106)  //(start,how many to delete from 2, add as want....) , returns deleted value if use vari
-        console.log("after splice", num)
-
-
-        let newnum = num.slice(0, 3)   // reutrns  0 to < 3 elements, doesnot change array, if one argument then reutrns from that to null
-        console.log("slice", newnum)
-
+      let newnum = num.slice(0, 3); // reutrns  0 to < 3 elements, doesnot change array, if one argument then reutrns from that to null
+      console.log("slice", newnum);
     </script>
-</body>
-
+  </body>
 </html>

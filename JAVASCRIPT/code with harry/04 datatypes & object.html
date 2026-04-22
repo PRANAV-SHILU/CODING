@@ -1,46 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      document.write("JavaScript tutorial 4: primitive data types<br>");
 
-        document.write("JavaScript tutorial 4: primitive data types<br>")
+      let a = null;
+      let b = 10;
+      let c = true;
+      let d = BigInt("567") + BigInt("3");
+      let e = "Pranav";
+      let f = Symbol("I am a symbol");
+      let g = undefined; // or let g;
 
-        let a = null;
-        let b = 10;
-        let c = true;
-        let d = BigInt("567") + BigInt("3");
-        let e = "Pranav";
-        let f = Symbol("I am a symbol");
-        let g = undefined; // or let g;
+      document.write(a, b, c, d, e, String(f), g); // Or f.toString()
+      console.log(a, b, c, d, e, f, g);
 
-        document.write(a, b, c, d, e, String(f), g); // Or f.toString()
-        console.log(a, b, c, d, e, f, g);
+      document.write("<br>typeof d: " + typeof d);
+      console.log(typeof d);
 
-        document.write("<br>typeof d: " + typeof d);
-        console.log(typeof d)
+      // objects is a non primitive data type
+      const item = {
+        pranav: true,
+        shilu: 7,
+        car: "BMW",
+        home: undefined,
+        city: "bhavnagar",
+      };
 
-
-        // objects is a non primitive data type
-        const item = {
-            "pranav": true,
-            "shilu": 7,
-            "car": "BMW",
-            "home": undefined,
-            "city": "bhavnagar",
-        }
-
-        console.log(typeof item)
-        console.log(item)
-        console.log(item["pranav"])
-
+      console.log(typeof item);
+      console.log(item);
+      console.log(item["pranav"]);
     </script>
-</body>
-
+  </body>
 </html>
