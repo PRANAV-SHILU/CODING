@@ -1,64 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            background-color: black;
-            color: green;
-        }
+      body {
+        background-color: black;
+        color: green;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-
-
+  <body>
     <script>
-        let a = [
-            "initializing Hack tool",
-            "Connecting to Facebook",
-            "connecting to server 1",
-            "connection failed, Retrying....",
-            "Connecting to server 2",
-            "connected successfully...",
-            "Username iamharry",
-            "Trying brute process",
-            "100k password tried...",
-            "Match not found",
-            "Trying another 100k passwords",
-            "Match found",
-            "LOggin successfully"
-        ]
-        const sleep = (seconds) => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(true)
-                }, seconds * 1000)
-            })
+      let a = [
+        "initializing Hack tool",
+        "Connecting to Facebook",
+        "connecting to server 1",
+        "connection failed, Retrying....",
+        "Connecting to server 2",
+        "connected successfully...",
+        "Username iamharry",
+        "Trying brute process",
+        "100k password tried...",
+        "Match not found",
+        "Trying another 100k passwords",
+        "Match found",
+        "LOggin successfully",
+      ];
+      const sleep = (seconds) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(true);
+          }, seconds * 1000);
+        });
+      };
+
+      let hackerman = async (message) => {
+        await sleep(2);
+        // console.log(message)
+        document.body.innerHTML += message + "<br>";
+      };
+
+      let hack = async () => {
+        for (let i = 0; i < a.length; i++) {
+          await hackerman(a[i]);
         }
+      };
 
-        let hackerman = async (message) => {
-            await sleep(2);
-            // console.log(message)
-            document.body.innerHTML += message + "<br>";
-        }
-
-        let hack = async () => {
-            for (let i = 0; i < a.length; i++) {
-                await hackerman(a[i])
-            }
-        }
-
-        hack();
-
-
-
-
+      hack();
     </script>
-</body>
-
+  </body>
 </html>

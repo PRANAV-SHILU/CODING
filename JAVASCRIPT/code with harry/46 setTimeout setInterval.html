@@ -1,49 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     ffv
     <script>
+      // setTimeout runs only once
+      // setInterval runs in a loop continiuesly
+      //clearTimeout stops the execution of setInterval
+      //this both removes existing pnce from html or javascript and adds thiet text once if use document.write
 
-        // setTimeout runs only once 
-        // setInterval runs in a loop continiuesly
-        //clearTimeout stops the execution of setInterval
-        //this both removes existing pnce from html or javascript and adds thiet text once if use document.write
+      document.write("hello");
 
-        document.write("hello")
+      // const sum = (a, b) => {
+      //     console.log("I am running " + (a + b))
+      //     return a + b;
+      // }
+      // setTimeout(sum, 1000, 1, 2)   // sum is function which will run after 1000ms = 1second and 1,2 are arguments
 
-        // const sum = (a, b) => {
-        //     console.log("I am running " + (a + b))
-        //     return a + b;
-        // }
-        // setTimeout(sum, 1000, 1, 2)   // sum is function which will run after 1000ms = 1second and 1,2 are arguments
+      // let a = setTimeout(function () {
+      //     alert("I am insdie setTimeout")
+      // }, 2000)
+      // let b = prompt("do you wanna run the settiomeout")
 
+      // if (b == "no")
+      //     clearTimeout(a)
 
+      // console.log(a)
 
-        // let a = setTimeout(function () {
-        //     alert("I am insdie setTimeout")
-        // }, 2000)
-        // let b = prompt("do you wanna run the settiomeout")
-
-        // if (b == "no")
-        //     clearTimeout(a)
-
-        // console.log(a)
-
-
-
-        // setInterval(function () {
-        //     alert("setinterval")
-        // }, 3000)
-
-
+      // setInterval(function () {
+      //     alert("setinterval")
+      // }, 3000)
     </script>
-</body>
-
+  </body>
 </html>

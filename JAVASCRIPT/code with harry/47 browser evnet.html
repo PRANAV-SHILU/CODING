@@ -1,29 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        click me
-        <button onclick="alert('hello'); let a=5; console.log(a);">on clcik </button>
-        <button onmouseenter="alert('container ke andar mouse gaya');">on mouse enter</button> // it's like hover
+      click me
+      <button
+        onclick="
+          alert('hello');
+          let a = 5;
+          console.log(a);
+        "
+      >
+        on clcik
+      </button>
+      <button onmouseenter="alert('container ke andar mouse gaya')">
+        on mouse enter
+      </button>
+      // it's like hover
     </div>
 
     <script>
-        let c = document.getElementsByClassName("container")[0]
+      let c = document.getElementsByClassName("container")[0];
 
-        c.onclick = () => {
-            c.innerHTML = "This is script onclick"
-        }
-
+      c.onclick = () => {
+        c.innerHTML = "This is script onclick";
+      };
     </script>
-
-</body>
-
+  </body>
 </html>

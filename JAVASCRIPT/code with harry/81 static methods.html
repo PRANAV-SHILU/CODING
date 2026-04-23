@@ -1,33 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        class Animal {
-            constructor(name) {
-                this.name = Animal.capitalize(name)
-            }
-            walk() {
-                console.log(`${this.name} is walking`)
-            }
-            static capitalize(name){
-                return name.charAt(0).toUpperCase() + name.substr(1,name.length)
-            }
+      class Animal {
+        constructor(name) {
+          this.name = Animal.capitalize(name);
         }
+        walk() {
+          console.log(`${this.name} is walking`);
+        }
+        static capitalize(name) {
+          return name.charAt(0).toUpperCase() + name.substr(1, name.length);
+        }
+      }
 
-        j = new Animal("jack")
-        j.walk();
-        // console.log(j.capitalize("jack"))  //this doesnot work static function only called by class name
+      j = new Animal("jack");
+      j.walk();
+      // console.log(j.capitalize("jack"))  //this doesnot work static function only called by class name
     </script>
-
-
-</body>
-
+  </body>
 </html>

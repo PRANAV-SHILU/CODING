@@ -1,56 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-
-
+  <body>
     <script>
-        let p1 = new Promise((resolve, reject) => {
-            // console.log("promise 1 is pending")
-            setTimeout(() => {
-                // console.log("promise 1 resolved")
-                resolve(true);
-            }, 3000);
-        })
+      let p1 = new Promise((resolve, reject) => {
+        // console.log("promise 1 is pending")
+        setTimeout(() => {
+          // console.log("promise 1 resolved")
+          resolve(true);
+        }, 3000);
+      });
 
-        let p2 = new Promise((resolve, reject) => {
-            // console.log("promise 2 is pending")
-            setTimeout(() => {
-                // console.log("promise 2 rejected")
-                reject(new Error("i am error"))
-            }, 3000)
-        })
+      let p2 = new Promise((resolve, reject) => {
+        // console.log("promise 2 is pending")
+        setTimeout(() => {
+          // console.log("promise 2 rejected")
+          reject(new Error("i am error"));
+        }, 3000);
+      });
 
-        // console.log(p1,p2)
+      // console.log(p1,p2)
 
-        p1.then((value)=>{
-            console.log("we are in then of p1 ",value)
-        })
-        p1.then(alert)
+      p1.then((value) => {
+        console.log("we are in then of p1 ", value);
+      });
+      p1.then(alert);
 
-        p2.catch((error)=>{
-            console.log("we are in catch of p2 ",error)
-        })
-        p2.catch(alert)
+      p2.catch((error) => {
+        console.log("we are in catch of p2 ", error);
+      });
+      p2.catch(alert);
 
-
-
-
-        //to use both then and catch
-        // p2.then((value)=>{
-        //     console.log("we are in then of p2 ",value)
-        // },(error)=>{
-        //     console.log("we are in catch of p2 ",error)
-        // })
-
+      //to use both then and catch
+      // p2.then((value)=>{
+      //     console.log("we are in then of p2 ",value)
+      // },(error)=>{
+      //     console.log("we are in catch of p2 ",error)
+      // })
     </script>
-</body>
-
+  </body>
 </html>

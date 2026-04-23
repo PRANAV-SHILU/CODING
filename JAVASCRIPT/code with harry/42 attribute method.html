@@ -1,30 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="first" class="hey">Hey i am first container</div>
 
     <script>
-        let a = first.getAttribute("class")   // returns class name of 'first' id
-        console.log(a)
+      let a = first.getAttribute("class"); // returns class name of 'first' id
+      console.log(a);
 
-        console.log(first.hasAttribute("class"))   //checks if it has class or not
-        console.log(first.hasAttribute("style"))    // checks if it has style attribute or not
+      console.log(first.hasAttribute("class")); //checks if it has class or not
+      console.log(first.hasAttribute("style")); // checks if it has style attribute or not
 
-        // first.setAttribute("hidden", "true")   //it impliments hidden attribute to the first id,  attribute,value
-        first.setAttribute("class", "class1 class2")   // impliments two classes, see in Elements in developer option in browser
+      // first.setAttribute("hidden", "true")   //it impliments hidden attribute to the first id,  attribute,value
+      first.setAttribute("class", "class1 class2"); // impliments two classes, see in Elements in developer option in browser
 
-        // first.removeAttribute("class")  // deletes class attribute to the first id, also see in element in F12
+      // first.removeAttribute("class")  // deletes class attribute to the first id, also see in element in F12
 
-        console.log(first.attributes)   //gives list of all attributes given in it like id,class as object
-
+      console.log(first.attributes); //gives list of all attributes given in it like id,class as object
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,29 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="first">Hey i am first id</div>
 
     <script>
-        first.insertAdjacentHTML('beforebegin', '<div class=test>before begin</div>')
-        first.insertAdjacentHTML('afterbegin', '<div class=test>after begin</div>')
+      first.insertAdjacentHTML(
+        "beforebegin",
+        "<div class=test>before begin</div>",
+      );
+      first.insertAdjacentHTML(
+        "afterbegin",
+        "<div class=test>after begin</div>",
+      );
 
-        first.insertAdjacentHTML('beforeend', '<div class=test>before end</div>')
-        first.insertAdjacentHTML('afterend', '<div class=test>after end</div>')
+      first.insertAdjacentHTML("beforeend", "<div class=test>before end</div>");
+      first.insertAdjacentHTML("afterend", "<div class=test>after end</div>");
 
-        // beforebegin  = before
-        // afterbegin = prepend
+      // beforebegin  = before
+      // afterbegin = prepend
 
-        // beforeend = append
-        // afterend = after
-
+      // beforeend = append
+      // afterend = after
     </script>
-</body>
-
+  </body>
 </html>

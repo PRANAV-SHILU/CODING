@@ -1,41 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <script>
-        // evvery error has two property : message and name
-        // try{
-        //     // throw new Error("i am custom error")
-        //     throw new ReferenceError("i am custom error")
-        // }catch(err){
-        //     console.log("error caught: " + err)
-        //     console.log("error name: " + err.name)
-        //     console.log("error message: " + err.message)
-        //     console.log("error stack: " + err.stack)
-        // }
+      // evvery error has two property : message and name
+      // try{
+      //     // throw new Error("i am custom error")
+      //     throw new ReferenceError("i am custom error")
+      // }catch(err){
+      //     console.log("error caught: " + err)
+      //     console.log("error name: " + err.name)
+      //     console.log("error message: " + err.message)
+      //     console.log("error stack: " + err.stack)
+      // }
 
+      try {
+        let age = prompt("Enter your age");
+        age = Number.parseInt(age);
 
-        try {
-            let age = prompt("Enter your age")
-            age = Number.parseInt(age);
-
-            if (age > 120)
-                throw new ReferenceError("This is not valid age ")
-            
-        } catch (error) {
-            console.log(error)
-        }
-
-
+        if (age > 120) throw new ReferenceError("This is not valid age ");
+      } catch (error) {
+        console.log(error);
+      }
     </script>
-</body>
-
+  </body>
 </html>

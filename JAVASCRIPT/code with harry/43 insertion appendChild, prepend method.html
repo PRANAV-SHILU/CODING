@@ -1,51 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     i am start of outside container
     <div class="container">
-        i am start of container(inner)
-        <div id="first">I am a first element</div>
-        i am end of this container(inner)
+      i am start of container(inner)
+      <div id="first">I am a first element</div>
+      i am end of this container(inner)
     </div>
     i am end of outside container
 
     <script>
-        let a = document.getElementsByTagName('div')[0]
+      let a = document.getElementsByTagName("div")[0];
 
-        // a.innerHTML += '<h1>hello dosto</h1>';
+      // a.innerHTML += '<h1>hello dosto</h1>';
 
+      let div = document.createElement("div");
+      div.innerHTML = "<h1>hello dosto</h1>"; // doesn't work before you use append,prepend
 
-        let div = document.createElement('div')
-        div.innerHTML = '<h1>hello dosto</h1>'  // doesn't work before you use append,prepend
+      // you can make child of onnly one element not for multiple, used only once
+      //this make this div a child of let a, it means it inserts a div into container div
 
-        // you can make child of onnly one element not for multiple, used only once
-        //this make this div a child of let a, it means it inserts a div into container div
+      // document.body.appendChild(div)  // this make a div into body
 
+      // a.appendChild(div)           // this inserts at the end of container
 
-        // document.body.appendChild(div)  // this make a div into body
+      // a.prepend(div);              //also creats but at the starts of container
 
-        // a.appendChild(div)           // this inserts at the end of container
+      // a.before(div)              // this inserts outside before the container
 
-        // a.prepend(div);              //also creats but at the starts of container
+      // a.after(div)                  //this inserts outside after the container
 
-        // a.before(div)              // this inserts outside before the container
+      // a.replaceWith(div)               // replace entire container with this let div
 
-        // a.after(div)                  //this inserts outside after the container
-
-        // a.replaceWith(div)               // replace entire container with this let div
-
-        // first.remove()                      // removes entire first id
-
+      // first.remove()                      // removes entire first id
     </script>
-
-</body>
-
+  </body>
 </html>

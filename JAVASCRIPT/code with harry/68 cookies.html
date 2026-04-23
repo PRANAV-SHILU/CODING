@@ -1,29 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        // code is correct but not getting print 
+      // code is correct but not getting print
 
-        console.log(document.cookie)
-        // set cookies (use name=value format;)
-        document.cookie = "name=harry1122334400";
-        document.cookie = "name2=harry11223344002";
-        document.cookie = "name=harry"; // this will overwrite the earlier 'name' cookie
+      console.log(document.cookie);
+      // set cookies (use name=value format;)
+      document.cookie = "name=harry1122334400";
+      document.cookie = "name2=harry11223344002";
+      document.cookie = "name=harry"; // this will overwrite the earlier 'name' cookie
 
-        let key = prompt("enter your key")
-        let value = prompt("Enetr your value")
-        document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}` //encodes data, decodeURIComponent used to decode encoded thing
+      let key = prompt("enter your key");
+      let value = prompt("Enetr your value");
+      document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`; //encodes data, decodeURIComponent used to decode encoded thing
 
-        console.log(document.cookie)
+      console.log(document.cookie);
     </script>
-</body>
-
+  </body>
 </html>

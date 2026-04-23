@@ -1,41 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <script>
+      const createToDo = async () => {
+        let options = {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify({
+            title: "Harry",
+            body: "bhai",
+            userId: 1100,
+          }),
+        };
 
+        let p = await fetch(
+          "https://jsonplaceholder.typicode.com/posts",
+          options,
+        );
+        let response = await p.json();
+        return response;
+      };
 
-        const createToDo = async () => {
-            let options = {
-                method: "POST",
-                headers: { "Content-type": "application/json" },
-                body: JSON.stringify({
-                    title: 'Harry',
-                    body: 'bhai',
-                    userId: 1100,
-                }),
-            }
-            
-            let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
-            let response = await p.json()
-            return response
-        }
+      const mainFunc = async () => {
+        let todo = await createToDo();
+        console.log(todo);
+      };
 
-        const mainFunc = async () => {
-            let todo = await createToDo()
-            console.log(todo)
-        }
-
-        mainFunc();
+      mainFunc();
     </script>
-</body>
-
+  </body>
 </html>

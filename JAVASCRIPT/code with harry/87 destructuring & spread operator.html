@@ -1,55 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        //destructuring
-        let arr = [3, 5, 6, 7, 8, 9]
-        console.log(arr)
+      //destructuring
+      let arr = [3, 5, 6, 7, 8, 9];
+      console.log(arr);
 
-        let [a, b] = arr;
-         // a =arr[0]
-        // b=arr[1]
-        // no need to do this
-        console.log(a, b)
+      let [a, b] = arr;
+      // a =arr[0]
+      // b=arr[1]
+      // no need to do this
+      console.log(a, b);
 
-        let [x, , z, , ...rest] = arr
-        console.log(a, z, rest)
+      let [x, , z, , ...rest] = arr;
+      console.log(a, z, rest);
 
+      // for Object
+      let { p, q } = { a: 1, b: 5 };
+      console.log(p, q);
 
-        // for Object 
-        let { p, q } = { a: 1, b: 5 }
-        console.log(p, q)
+      //spread operator
+      let arr1 = [3, 5, 8];
+      let obj1 = { ...arr1 }; //convert array into an object
+      console.log(obj1);
 
+      function sum(v1, v2, v3) {
+        return v1 + v2 + v3;
+      }
+      console.log(sum(...arr1)); //pass arguments from array values
 
-
-        //spread operator
-        let arr1 = [3,5,8]
-        let obj1 = {...arr1}  //convert array into an object
-        console.log(obj1)
-
-
-        function sum (v1,v2,v3){
-            return v1+v2+v3
-        }
-        console.log(sum(...arr1))  //pass arguments from array values
-
-
-        let obj2 = {
-            name: "harry",
-            company:"xyz",
-            address:"bvn"
-        }
-        console.log({...obj2, name:"john"})
+      let obj2 = {
+        name: "harry",
+        company: "xyz",
+        address: "bvn",
+      };
+      console.log({ ...obj2, name: "john" });
     </script>
-
-</body>
-
+  </body>
 </html>

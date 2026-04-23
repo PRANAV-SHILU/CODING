@@ -1,39 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .red {
-            background-color: red;
-        }
+      .red {
+        background-color: red;
+      }
 
-        .yellow {
-            background-color: yellow;
-        }
+      .yellow {
+        background-color: yellow;
+      }
 
-        .text-black {
-            color: black;
-        }
+      .text-black {
+        color: black;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="first" class="red text-black">hello</div>
 
     <script>
+      console.log(first.classList); // used for seeing all class of element
+      console.log(first.classList.contains("red")); // check if this class is given or not
 
-        console.log(first.classList)                    // used for seeing all class of element
-        console.log(first.classList.contains("red"))       // check if this class is given or not
-
-        first.className = "text-black yellow"       // remove all class gives only written inside it 
-        first.classList.remove("yellow")            // just removes class written inside it
-        first.classList.add("red")                  // add new class along with previous ones
-        first.classList.toggle("red")               // if in then remove, if not then insert
+      first.className = "text-black yellow"; // remove all class gives only written inside it
+      first.classList.remove("yellow"); // just removes class written inside it
+      first.classList.add("red"); // add new class along with previous ones
+      first.classList.toggle("red"); // if in then remove, if not then insert
     </script>
-</body>
-
+  </body>
 </html>

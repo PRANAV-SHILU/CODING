@@ -1,70 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     hello world
 
     <script>
+      // syncronous & Asyncronous
 
-        // syncronous & Asyncronous
+      // syncronous = one by one - sequential
+      // let a=prompt("this will stop all further execution untill you enter value")
+      // let b= prompt("this will run only if you enter in a")
+      // console.log("this will execute when you entered both a and b")
 
-        // syncronous = one by one - sequential
-        // let a=prompt("this will stop all further execution untill you enter value")
-        // let b= prompt("this will run only if you enter in a")
-        // console.log("this will execute when you entered both a and b")
+      // Asyncronous = it runs without fear of previous codes, eg-setTimeout
+      // console.log("start")
+      // setTimeout(()=>{
+      //     console.log("this is asyncronous")
+      // },3000)
+      // console.log("end")
 
+      // output:
+      // Start
+      // end
+      // this is asyncronous
 
-        // Asyncronous = it runs without fear of previous codes, eg-setTimeout
-        // console.log("start")
-        // setTimeout(()=>{
-        //     console.log("this is asyncronous")
-        // },3000)
-        // console.log("end")
+      // so this asyncronous doesnt wait for make other wait for their execultion, it will display whenever it's time comes
 
-        // output:
-        // Start 
-        // end 
-        // this is asyncronous
+      // callback function : its noting just one func calls another func when script loads : Asyncronous
+      function loadScript(src, callback) {
+        var script = document.createElement("script");
+        script.src = src;
 
-        // so this asyncronous doesnt wait for make other wait for their execultion, it will display whenever it's time comes
+        script.onload = () => {
+          console.log("script loaded with src " + src);
+          callback(null, src); // calls hello() when loads script, second argument is callback ()
+        };
 
+        script.onerror = () => {
+          console.log("Error with src " + src);
+          callback(new Error("src with some error"));
+        };
 
+        document.head.appendChild(script);
+      }
 
-        // callback function : its noting just one func calls another func when script loads : Asyncronous
-        function loadScript(src, callback) {
-            var script = document.createElement("script")
-            script.src = src;
-
-            script.onload = () => {
-                console.log("script loaded with src " + src)
-                callback(null, src);   // calls hello() when loads script, second argument is callback ()
-            }
-
-            script.onerror = () => {
-                console.log("Error with src " + src)
-                callback(new Error("src with some error"))
-            }
-
-            document.head.appendChild(script)
+      function hello(error, src) {
+        if (error) {
+          console.log(error);
+          return;
         }
+        alert("hello  " + src);
+      }
 
-        function hello(error, src) {
-            if (error) {
-                console.log(error)
-                return;
-            }
-            alert("hello  " + src)
-        }
-
-        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.j", hello)
-
+      loadScript(
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.j",
+        hello,
+      );
     </script>
-</body>
-
+  </body>
 </html>

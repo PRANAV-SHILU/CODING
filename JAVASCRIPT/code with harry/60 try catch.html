@@ -1,37 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      setTimeout(() => {
+        console.log("hacking wi-fi.....");
+      }, 1000);
 
-        setTimeout(() => {
-            console.log("hacking wi-fi.....")
-        }, 1000)
+      try {
+        console.log(rahul);
+      } catch (err) {
+        console.log("error caught: " + err);
+      }
 
-        try {
-            console.log(rahul);
-        }
-        catch (err) {
-            console.log("error caught: " + err)
-        }
-
-        // console.log(rahul)  // this error stops execution to below but above try catch can runs next code even with error
-        setTimeout(() => {
-            console.log("fetching username and password.....")
-        }, 2000)
-        setTimeout(() => {
-            console.log("username and password fetched")
-        }, 3000)
-        setTimeout(() => {
-            console.log("logging in.....")
-        }, 4000)
+      // console.log(rahul)  // this error stops execution to below but above try catch can runs next code even with error
+      setTimeout(() => {
+        console.log("fetching username and password.....");
+      }, 2000);
+      setTimeout(() => {
+        console.log("username and password fetched");
+      }, 3000);
+      setTimeout(() => {
+        console.log("logging in.....");
+      }, 4000);
     </script>
-</body>
-
+  </body>
 </html>

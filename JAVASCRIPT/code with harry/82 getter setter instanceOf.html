@@ -1,40 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // use _ on variable where used gutter or setter 
-        class Animal{
-            constructor(name){
-                this._name=name
-            }
-            fly(){
-                alert("udta hi firu in havaon main kahi")
-            }
-            get name(){
-                return this._name
-            }
-            set name(newname){
-                return this._name = newname
-            }
+      // use _ on variable where used gutter or setter
+      class Animal {
+        constructor(name) {
+          this._name = name;
         }
+        fly() {
+          alert("udta hi firu in havaon main kahi");
+        }
+        get name() {
+          return this._name;
+        }
+        set name(newname) {
+          return (this._name = newname);
+        }
+      }
 
-        let a = new Animal("laal pari")
-        a.fly()
-        console.log(a.name)
-        a.name="pili pari"
-        console.log(a.name)
+      let a = new Animal("laal pari");
+      a.fly();
+      console.log(a.name);
+      a.name = "pili pari";
+      console.log(a.name);
 
-        console.log(a instanceof Animal)
-        console.log(" yes, a is object Animal or it's child class object")
-        let c =56
-        console.log(c instanceof Animal)
-        console.log(" no c object for Animal" )
+      console.log(a instanceof Animal);
+      console.log(" yes, a is object Animal or it's child class object");
+      let c = 56;
+      console.log(c instanceof Animal);
+      console.log(" no c object for Animal");
     </script>
-    
-</body>
+  </body>
 </html>

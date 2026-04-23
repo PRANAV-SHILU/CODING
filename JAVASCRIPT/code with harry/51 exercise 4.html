@@ -1,35 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     setInterval
 
     <div id="time"></div>
 
     <script>
+      setInterval(() => {
+        let a = new Date();
+        let h = a.getHours();
+        let m = a.getMinutes();
+        let s = a.getSeconds();
+        let d = a.getDate();
 
-        setInterval(()=> {
-            let a = new Date()
-            let h = a.getHours();
-            let m = a.getMinutes()
-            let s = a.getSeconds()
-            let d = a.getDate()
+        console.clear();
+        console.log(a, d, h - 12, m, s);
 
-            console.clear()
-            console.log(a, d, (h - 12), m, s)
+        // document.write(`${h}:${m}:${s} <br>`)
 
-            // document.write(`${h}:${m}:${s} <br>`)        
-
-            time.innerHTML = `${h - 12}:${m}:${s} <br>`
-        }, 1000)
-
+        time.innerHTML = `${h - 12}:${m}:${s} <br>`;
+      }, 1000);
     </script>
-</body>
-
+  </body>
 </html>

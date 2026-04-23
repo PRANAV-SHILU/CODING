@@ -1,38 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
+      let promise = new Promise(function (resolve, reject) {
+        alert("i am inside promise function");
+        resolve(56);
+      });
 
-        let promise = new Promise(function (resolve, reject) {
-            alert("i am inside promise function");
-            resolve(56);
-        });
+      console.log("hello 1");
+      setTimeout(() => {
+        console.log("hello 2");
+      }, 2000);
+      console.log("hello 3");
 
+      console.log(promise);
 
-        console.log("hello 1");
-        setTimeout(() => {
-            console.log("hello 2");
-        }, 2000)
-        console.log("hello 3");
-
-
-        console.log(promise);
-
-
-        // fetch google.com homepage ==> console.log("google homepage done") then
-        // fatch data from data api
-        //fetch picture from server
-        // print downloading..//rest of script
+      // fetch google.com homepage ==> console.log("google homepage done") then
+      // fatch data from data api
+      //fetch picture from server
+      // print downloading..//rest of script
     </script>
-
-</body>
-
+  </body>
 </html>

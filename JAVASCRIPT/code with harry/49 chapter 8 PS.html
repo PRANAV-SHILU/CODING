@@ -1,45 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .bulb {
-            background-color: yellow;
-        }
+      .bulb {
+        background-color: yellow;
+      }
 
-        .bulb-container {
-            height: 345px;
-            width: 345px;
-        }
+      .bulb-container {
+        height: 345px;
+        width: 345px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Q-2
     <h1>bookmark</h1>
     <button id="gooogle">google</button> -->
 
     <!-- Q-4 -->
-    <div id=bulb class="bulb bulb-container">
-
-    </div>
+    <div id="bulb" class="bulb bulb-container"></div>
     <script>
+      //Q-2
+      // const btn = document.getElementById('gooogle');
+      // btn.addEventListener('click', function () {
+      //     window.location.href = 'https://www.google.com';
+      // });
 
-        //Q-2
-        // const btn = document.getElementById('gooogle');
-        // btn.addEventListener('click', function () {
-        //     window.location.href = 'https://www.google.com';
-        // });
-
-
-        //Q-4
-        setInterval(function () {
-            document.querySelector("#bulb").classList.toggle("bulb")
-        },300)
+      //Q-4
+      setInterval(function () {
+        document.querySelector("#bulb").classList.toggle("bulb");
+      }, 300);
     </script>
-</body>
-
+  </body>
 </html>

@@ -1,70 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <script>
-        // basic concept of promise chaining
-        // let p1 = new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //         console.log("resolver after 2 second")
-        //         resolve(56);
-        //     }, 2000);
-        // })
+      // basic concept of promise chaining
+      // let p1 = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //         console.log("resolver after 2 second")
+      //         resolve(56);
+      //     }, 2000);
+      // })
 
-        // p1.then((value) => {
-        //     console.log(value)
-        //     return new Promise((resolve, reject) => {
-        //         setTimeout(() => {
-        //             console.log("i am p2 and i am resolved")
-        //             resolve(true);
-        //         }, 2000);
-        //     })
-        //     // return p2; for let p2 = new promise
-        // }).then((value) => {
-        //     console.log("we are in second then ", value)
-        //     return 2;
-        // }).then((value) => {
-        //     console.log("we are in third then ", value)
-        // })
+      // p1.then((value) => {
+      //     console.log(value)
+      //     return new Promise((resolve, reject) => {
+      //         setTimeout(() => {
+      //             console.log("i am p2 and i am resolved")
+      //             resolve(true);
+      //         }, 2000);
+      //     })
+      //     // return p2; for let p2 = new promise
+      // }).then((value) => {
+      //     console.log("we are in second then ", value)
+      //     return 2;
+      // }).then((value) => {
+      //     console.log("we are in third then ", value)
+      // })
 
+      // this is used instead of callback hell
+      const loadscript = (src) => {
+        return new Promise((resolve, reject) => {
+          let script = document.createElement("script");
+          script.src = src;
+          script.type = "text/javascript";
+          document.head.appendChild(script);
+          script.onload = () => {
+            resolve(1);
+          };
+          script.onerror = () => {
+            reject(0);
+          };
+        });
+      };
 
+      let p1 = loadscript(
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js",
+      );
 
-        // this is used instead of callback hell
-        const loadscript = (src) => {
-            return new Promise((resolve, reject) => {
-                let script = document.createElement("script");
-                script.src = src;
-                script.type = "text/javascript";
-                document.head.appendChild(script);
-                script.onload = () => {
-                    resolve(1);
-                }
-                script.onerror = () => {
-                    reject(0);
-                }
-            })
-        }
+      p1.then((value) => {
+        console.log("script loaded successfully " + value);
 
-        let p1 = loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js");
-
-        p1.then((value) => {
-            console.log("script loaded successfully " + value)
-
-            return loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js");
-        }).then((value) => {
-            console.log("second script loaded successfully " + value)
-        }).catch((error => {
-            console.log("script loading failed " + error)
-        }));
+        return loadscript(
+          "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js",
+        );
+      })
+        .then((value) => {
+          console.log("second script loaded successfully " + value);
+        })
+        .catch((error) => {
+          console.log("script loading failed " + error);
+        });
     </script>
-</body>
-
+  </body>
 </html>

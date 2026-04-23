@@ -1,42 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script>
-        class railwayForm {
-            constructor(trainno) {
-                this.trainno = trainno
-            }
-            submit() {
-                alert(this.name + " Form submittedd " + this.trainno)
-            }
-            cancel() {
-                alert(this.name + " Forma canceled " + this.trainno)
-                this.trainno = null;
-            }
-            fill(name) {
-                this.name = name;
-            }
+      class railwayForm {
+        constructor(trainno) {
+          this.trainno = trainno;
         }
+        submit() {
+          alert(this.name + " Form submittedd " + this.trainno);
+        }
+        cancel() {
+          alert(this.name + " Forma canceled " + this.trainno);
+          this.trainno = null;
+        }
+        fill(name) {
+          this.name = name;
+        }
+      }
 
-        let harry = new railwayForm(123)
-        let rohan = new railwayForm(456)
+      let harry = new railwayForm(123);
+      let rohan = new railwayForm(456);
 
-        harry.fill("harry")
-        rohan.fill("rohan")
+      harry.fill("harry");
+      rohan.fill("rohan");
 
-        harry.submit()
-        rohan.submit()
-        rohan.cancel()
-        rohan.submit()
+      harry.submit();
+      rohan.submit();
+      rohan.cancel();
+      rohan.submit();
     </script>
-</body>
-
+  </body>
 </html>
