@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COUNTER API WITH SESSION STORAGE</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- this is not session storage code from learnvern -->
 
     <h2>Counter (Saved in Session)</h2>
@@ -14,36 +14,30 @@
 
     <button onclick="start()">start Counter</button>
     <button onclick="stop()">stop Counter</button>
-    
+
     <script>
+      var count = sessionStorage.getItem("count") || 0;
 
-        var count=sessionStorage.getItem("count") || 0;
+      var run = null;
 
-        var run = null;
-
-        function start()
-        {
-            if(run==null)
-            {
-                run=setInterval(update,500);
-            }
+      function start() {
+        if (run == null) {
+          run = setInterval(update, 500);
         }
+      }
 
-        function stop()
-        {
-            clearInterval(run);
-            run=null;
-        }
+      function stop() {
+        clearInterval(run);
+        run = null;
+      }
 
-        function update()
-        {
-            count++;
+      function update() {
+        count++;
 
-            document.getElementById("counter").innerHTML=count;
+        document.getElementById("counter").innerHTML = count;
 
-            sessionStorage.setItem("count",count)
-        }
-
+        sessionStorage.setItem("count", count);
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,102 +1,158 @@
 <html>
+  <head>
+    <title>REGISTRATION FORM</title>
+  </head>
 
-<head>
-  <title>REGISTRATION FORM</title>
-</head>
+  <body>
+    <form action="LOGIN.HTML" method="post" id="form-controls">
+      <!--no validate-->
 
-<body>
+      <fieldset>
+        <legend>REGISTRATION FORM</legend>
+        <br />
 
-  <form action="LOGIN.HTML" method="post" id="form-controls"> <!--no validate-->
+        <label for="name">Name : </label
+        ><input
+          type="text"
+          id="name"
+          name="name"
+          autocomplete="off"
+          autofocus
+        /><br /><br />
 
-    <fieldset>
+        <label for="password">password : </label
+        ><input type="password" id="password" name="password" /><br /><br />
 
-      <legend>REGISTRATION FORM</legend><BR>
+        <label for="email : ">email : </label
+        ><input type="email" id="email" name="email" required /><br /><br />
+        <!--autocomplete="off"-->
 
-      <label for="name">Name : </label><input type="text" id="name" name="name" autocomplete="off" autofocus><br><br>
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="phone"
+          pattern="[0-9]{10}"
+        /><br /><br />
 
-      <label for="password">password : </label><input type="password" id="password" name="password"><br><br>
+        <label for="number">Number</label>
+        <input
+          type="number"
+          id="number"
+          name="number"
+          placeholder="number"
+          pattern="[0-9]{10}"
+        /><br /><br />
 
-      <label for="email : ">email : </label><input type="email" id="email" name="email" required><br><br>
-      <!--autocomplete="off"-->
+        <label for="pan">pan number</label>
+        <input
+          type="text"
+          name="pan"
+          pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}"
+          placeholder="enter pan number"
+        /><br /><br />
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" placeholder="phone" pattern="[0-9]{10}"><br><br>
+        <label for="url">url </label>
+        <input type="url" id="url" name="url" disabled /><br /><br />
 
-      <label for="number">Number</label>
-      <input type="number" id="number" name="number" placeholder="number" pattern="[0-9]{10}"><br><br>
+        <label for="gender">gender : </label>
+        <input type="radio" name="gender" value="male" checked />male
+        <input type="radio" name="gender" value="female" />female <br /><br />
 
-      <label for="pan">pan number</label>
-      <input type="text" name="pan" pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}" placeholder="enter pan number"><br><br>
+        <label for="time">time </label>
+        <input type="time" id="time" name="time" /><br /><br />
 
-      <label for="url">url </label>
-      <input type="url" id="url" name="url" disabled><br><br>
+        <label for="week">week</label>
+        <input type="week" id="week" name="week" /><br /><br />
 
-      <label for="gender">gender : </label>
-      <input type="radio" name="gender" value="male" checked>male
-      <input type="radio" name="gender" value="female">female <br><br>
+        <label for="month">month</label>
+        <input type="month" name="month" id="month" /> <br /><br />
 
-      <label for="time">time </label>
-      <input type="time" id="time" name="time"><br><br>
+        <label for="birthdate">birthdate : </label>
+        <input
+          type="date"
+          value="birthdate"
+          name="birthdate"
+          id="birthdate"
+          min="2024-12-31"
+          max="2025-12-31"
+        />
+        <br /><br />
 
-      <label for="week">week</label>
-      <input type="week" id="week" name="week"><br><br>
+        <label for="date_and_time">date and time</label>
+        <input
+          type="datetime-local"
+          id="datetime"
+          name="datetime"
+          value="datetime-local"
+        />
+        <br /><br />
 
-      <label for="month">month</label>
-      <input type="month" name="month" id="month"> <br><br>
+        <label for="favourite_color">favourite color</label>
+        <input
+          type="color"
+          id="favourite_color"
+          name="favourite_color"
+        /><br /><br />
 
-      <label for="birthdate">birthdate : </label>
-      <input type="date" value="birthdate" name="birthdate" id="birthdate" min="2024-12-31" max="2025-12-31"> <br><br>
+        <label for="quantity">quantity</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="0"
+          max="10"
+        /><br /><br />
 
-      <label for="date_and_time">date and time</label>
-      <input type="datetime-local" id="datetime" name="datetime" value="datetime-local"> <br><br>
+        <label for="range">range</label>
+        <input type="range" id="range" name="range" /> <br /><br />
 
-      <label for="favourite_color">favourite color</label>
-      <input type="color" id="favourite_color" name="favourite_color"><br><br>
+        <label for="search">search</label>
+        <input type="search" id="search" name="search" /><br /><br />
 
-      <label for="quantity">quantity</label>
-      <input type="number" id="quantity" name="quantity" min="0" max="10"><br><br>
+        <label for="file_upload">upload file</label>
+        <input
+          type="file"
+          id="file_upload"
+          name="file_upload"
+          accept="audio/* , video/* , image/*"
+        /><br /><br />
 
-      <label for="range">range</label>
-      <input type="range" id="range" name="range"> <br><br>
+        <label for="sports">sports : </label>
+        <input type="checkbox" name="sportscricket" />cricket
+        <input type="checkbox" name="sportsfootball" />football
+        <input type="checkbox" name="sportsvolleyball" />volleyball <br /><br />
 
-      <label for="search">search</label>
-      <input type="search" id="search" name="search"><br><br>
+        <label for="EDUCATION">EDUCATION : </label>
+        <select size="4" name="education" multiple>
+          <option>S.S.C.</option>
+          <option>H.S.C.</option>
+          <option selected>B.C.A.</option>
+          <option>B.Sc.</option>
+          <option>B.Com.</option>
+          <option>B.A.</option>
+          <option>M.Sc.I.T.</option>
+          <option>P.G.D.C.A.</option>
+          <option>M.C.A.</option></select
+        ><br /><br />
 
-      <label for="file_upload">upload file</label>
-      <input type="file" id="file_upload" name="file_upload" accept="audio/* , video/* , image/*"><br><br>
+        <label for="address">address : </label
+        ><textarea rows="6" cols="30">Default text</textarea><br /><br />
 
-      <label for="sports">sports : </label>
-      <input type="checkbox" name="sportscricket">cricket
-      <input type="checkbox" name="sportsfootball">football
-      <input type="checkbox" name="sportsvolleyball">volleyball <br><br>
-
-      <label for="EDUCATION">EDUCATION : </label>
-      <select size="4" name="education" multiple>
-        <option>S.S.C.</option>
-        <option>H.S.C.</option>
-        <option selected>B.C.A.</option>
-        <option>B.Sc.</option>
-        <option>B.Com.</option>
-        <option>B.A.</option>
-        <option>M.Sc.I.T.</option>
-        <option>P.G.D.C.A.</option>
-        <option>M.C.A.</option>
-      </select><br><br>
-
-
-      <label for="address">address : </label><textarea rows="6" cols="30">Default text</textarea><br><br>
-
-      <center>
-        <label for="submit"></label> <input type="submit" value="submit">
-        <label for="reset"></label><input type="reset" value="reset" onclick="alert('form has been reset')">
-        <button type="button" onclick="alert('this is alert button')">alert button </button>
-      </center>
-
-
-    </fieldset>
-
-  </form>
-
-</body>
-
+        <center>
+          <label for="submit"></label> <input type="submit" value="submit" />
+          <label for="reset"></label
+          ><input
+            type="reset"
+            value="reset"
+            onclick="alert('form has been reset')"
+          />
+          <button type="button" onclick="alert('this is alert button')">
+            alert button
+          </button>
+        </center>
+      </fieldset>
+    </form>
+  </body>
 </html>

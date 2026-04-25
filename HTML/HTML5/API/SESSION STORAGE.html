@@ -1,33 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web session storage</title>
     <script>
-        function clickcounter() {
-            if (typeof (Storage) !== "undefined") {
-                if (sessionStorage.clickcount) {
-                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
-                } else {
-                    sessionStorage.clickcount = 1;
-                }
-                document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " times.";
-            }
-            else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-            }
+      function clickcounter() {
+        if (typeof Storage !== "undefined") {
+          if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+          } else {
+            sessionStorage.clickcount = 1;
+          }
+          document.getElementById("result").innerHTML =
+            "You have clicked the button " +
+            sessionStorage.clickcount +
+            " times.";
+        } else {
+          document.getElementById("result").innerHTML =
+            "Sorry, your browser does not support web storage...";
         }
+      }
     </script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <button onclick="clickcounter()">Click me</button>
     <p id="result"></p>
     <p>click the button start the counter.</p>
-
-</body>
-
+  </body>
 </html>
