@@ -1,5 +1,5 @@
 <?php 
-    example of numeric array 
+    // example of numeric array 
     $cars = array('Maruti','Audi','BMW','Ferrari','Toyota');
     $person[0] = "D Patel";
     
