@@ -21,7 +21,8 @@
             <th>hobbie</th>
             <th>address</th>
             <th>resume</th>
-            <th colspan="2">Options<th>
+            <th colspan="2">Options</th>
+            <!-- rowspan -->
         </tr>
     
         <?php
@@ -35,7 +36,7 @@
                 extract($row);
 
                 echo "<tr>";
-                echo "<td>".$id."</td>";
+                echo "<td>.$id.</td>";
                 echo "<td>".$name."</td>";
                 echo "<td>".$password."</td>";
                 echo "<td>".$email."</td>";

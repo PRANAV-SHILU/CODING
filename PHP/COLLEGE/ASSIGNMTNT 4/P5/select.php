@@ -18,7 +18,7 @@
         <tr>
             <th>ID</th>
             <th>Category</th>
-            <th>Vehicle Number</th>
+            <th>Vehicle Name</th>
             <th>Model Number</th>
             <th>Color</th>
             <th>Purchase Date</th>
@@ -32,7 +32,7 @@
             echo "<tr>";
             echo "<td>$id</td>";
             echo "<td>$category</td>";
-            echo "<td>$v_no</td>";
+            echo "<td>$v_name</td>";
             echo "<td>$m_no</td>";
             echo "<td>$color</td>";
             echo "<td>$p_year</td>";

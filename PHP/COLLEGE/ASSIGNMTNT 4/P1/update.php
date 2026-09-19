@@ -6,7 +6,7 @@
     $dest_loc = $old_resume;
     if ($_FILES['resume']['name'] != '') {
         $resume = $_FILES['resume']['name'];
-        $dest_loc = 'img/' . rand(0, 9) . rand(0, 9) . rand(0, 9) . '_' . $resume;
+        $dest_loc = 'img/' . rand(0, 99) . rand(0, 99) . rand(0, 99) . '_' . $resume;
 
         move_uploaded_file($_FILES['resume']['tmp_name'], $dest_loc);
         if (file_exists($old_resume))
