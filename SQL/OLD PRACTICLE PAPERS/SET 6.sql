@@ -1,9 +1,13 @@
+-- Set 6: Perform the following tasks.
+
+-- Question 1: Create COMPANY and insert company information.
 CREATE TABLE company (
     cid  NUMBER(3) PRIMARY KEY,
     name CHAR(30) UNIQUE NOT NULL,
     city CHAR(15)
 );
 
+-- Question 2: Create MEDICINE and insert medicine details.
 CREATE TABLE medicine (
     mid   NUMBER(3) PRIMARY KEY,
     mname CHAR(30) UNIQUE NOT NULL,

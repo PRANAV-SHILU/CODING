@@ -1,3 +1,6 @@
+-- Set 7: Perform the following tasks.
+
+-- Question 1: Create ITEM and insert item information.
 CREATE TABLE item (
     itemno NUMBER(3) PRIMARY KEY,
     name   VARCHAR2(20) UNIQUE NOT NULL,
@@ -17,6 +20,7 @@ INSERT INTO item VALUES (1, 'chair', 100);
 INSERT INTO item VALUES (2, 'bed', 200);
 INSERT INTO item VALUES (3, 'table', 300);
 
+-- Question 2: Create ORDER2 and insert order records.
 INSERT INTO order2 VALUES (1, '12-aug-2024', 1, 10);
 INSERT INTO order2 VALUES (2, '12-march-2024', 1, 10);
 INSERT INTO order2 VALUES (3, '12-aug-2024', 1, 10);
