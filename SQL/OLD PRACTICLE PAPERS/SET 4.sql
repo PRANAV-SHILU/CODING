@@ -16,6 +16,37 @@ CREATE TABLE fees (
 );
 
 
+
+INSERT INTO student VALUES (1, 'Amit', '15-jan-2000', 'Bhavnagar');
+INSERT INTO student VALUES (2, 'Bhavya', '25-mar-1999', 'Rajkot');
+INSERT INTO student VALUES (3, 'Chetan', '10-nov-2001', 'Bhavnagar');
+INSERT INTO student VALUES (4, 'Diya', '20-aug-1998', 'Ahmedabad');
+INSERT INTO student VALUES (5, 'Esha', '05-dec-2002', 'Bhavnagar');
+
+
+INSERT INTO fees VALUES (1, '05-jan-2024', 18000);
+INSERT INTO fees VALUES (1, '12-feb-2024', 22000);
+INSERT INTO fees VALUES (1, '18-mar-2024', 15000);
+
+INSERT INTO fees VALUES (2, '06-jan-2024', 21000);
+INSERT INTO fees VALUES (2, '14-feb-2024', 17000);
+INSERT INTO fees VALUES (2, '22-mar-2024', 19500);
+
+INSERT INTO fees VALUES (3, '08-jan-2024', 20000);
+INSERT INTO fees VALUES (3, '15-feb-2024', 16000);
+INSERT INTO fees VALUES (3, '25-mar-2024', 23000);
+
+INSERT INTO fees VALUES (4, '09-jan-2024', 18500);
+INSERT INTO fees VALUES (4, '16-feb-2024', 17500);
+INSERT INTO fees VALUES (4, '27-mar-2024', 14500);
+
+INSERT INTO fees VALUES (5, '11-jan-2024', 24000);
+INSERT INTO fees VALUES (5, '18-feb-2024', 13000);
+INSERT INTO fees VALUES (5, '28-mar-2024', 21000);
+
+
+
+
 -- Question 3: Write SQL query to display NAME, FEES_DATE, FEES_AMOUNT for students living in 'Bhavnagar'.
 SELECT name,  fdate,  famount
 FROM student A, fees B
@@ -55,39 +86,6 @@ WHERE dob = (
     SELECT MIN(dob)
     FROM student
 );
-
-
-
-
-INSERT INTO student VALUES (1, 'Amit', '15-jan-2000', 'Bhavnagar');
-INSERT INTO student VALUES (2, 'Bhavya', '25-mar-1999', 'Rajkot');
-INSERT INTO student VALUES (3, 'Chetan', '10-nov-2001', 'Bhavnagar');
-INSERT INTO student VALUES (4, 'Diya', '20-aug-1998', 'Ahmedabad');
-INSERT INTO student VALUES (5, 'Esha', '05-dec-2002', 'Bhavnagar');
-
-
-INSERT INTO fees VALUES (1, '05-jan-2024', 18000);
-INSERT INTO fees VALUES (1, '12-feb-2024', 22000);
-INSERT INTO fees VALUES (1, '18-mar-2024', 15000);
-
-INSERT INTO fees VALUES (2, '06-jan-2024', 21000);
-INSERT INTO fees VALUES (2, '14-feb-2024', 17000);
-INSERT INTO fees VALUES (2, '22-mar-2024', 19500);
-
-INSERT INTO fees VALUES (3, '08-jan-2024', 20000);
-INSERT INTO fees VALUES (3, '15-feb-2024', 16000);
-INSERT INTO fees VALUES (3, '25-mar-2024', 23000);
-
-INSERT INTO fees VALUES (4, '09-jan-2024', 18500);
-INSERT INTO fees VALUES (4, '16-feb-2024', 17500);
-INSERT INTO fees VALUES (4, '27-mar-2024', 14500);
-
-INSERT INTO fees VALUES (5, '11-jan-2024', 24000);
-INSERT INTO fees VALUES (5, '18-feb-2024', 13000);
-INSERT INTO fees VALUES (5, '28-mar-2024', 21000);
-
-
-
 
 
 
