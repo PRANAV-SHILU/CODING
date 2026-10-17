@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" action="insert.php" enctype="multipart/form-data">
+
+        Name: <input type="text" name="name" /> <br>
+
+        DOB: <input type="date" name="dob"> <br>
+
+        gender:
+        <input type="radio" name="gen" value="m" />MAle
+        <input type="radio" name="gen" value="f" />female <br>
+
+        hobby:
+        <input type="checkbox" name="hobby[]" value="cricet" />cricekt
+        <input type="checkbox" name="hobby[]" value="footbol" />footbal
+        <input type="checkbox" name="hobby[]" value="basketball" />basketball <br>
+
+        city:
+        <select name="city">:
+            <option value="bvn">bvn</option>
+            <option value="amd">amd</option>
+            <option value="pbr">pbr</option>
+        </select>
+        <br>
+
+        image
+        <input type="file" name="myfile" /><br><br>
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+
+</html>
